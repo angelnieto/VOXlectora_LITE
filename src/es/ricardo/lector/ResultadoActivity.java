@@ -471,6 +471,7 @@ public class ResultadoActivity extends Activity implements TextToSpeech.OnInitLi
 			texto=texto.replaceAll("!", "I");
 			texto=texto.replaceAll("¡", "I");
 			texto=texto.replaceAll(" cm", " centímetros");
+			texto=texto.replaceAll(" mm", " milímetros");
 			
 			return texto;
 		}
