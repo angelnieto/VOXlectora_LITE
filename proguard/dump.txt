@@ -71399,12 +71399,10 @@ Methods (count = 5):
       [232] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 7):
+      + Stack map table attribute (count = 5):
         - [16] Var: ..., Stack: (empty)
         - [118] Var: ..., Stack: (empty)
-        - [123] Var: ..., Stack: (empty)
         - [126] Var: ..., Stack: (empty)
-        - [205] Var: ..., Stack: (empty)
         - [208] Var: ..., Stack: (empty)
         - [232] Var: ..., Stack: (empty)
   + Method:       write([BII)V
@@ -71586,7 +71584,7 @@ Constant Pool (count = 452):
   + Class [es/ricardo/lector/CamaraActivity]
   + Class [es/ricardo/lector/c]
   + Class [es/ricardo/lector/d]
-  + Class [es/ricardo/lector/h]
+  + Class [es/ricardo/lector/e]
   + Class [java/io/File]
   + Class [java/io/IOException]
   + Class [java/lang/Math]
@@ -71668,7 +71666,7 @@ Constant Pool (count = 452):
   + Methodref [es/ricardo/lector/CamaraActivity.unregisterReceiver (Landroid/content/BroadcastReceiver;)V]
   + Methodref [es/ricardo/lector/c.<init> (Les/ricardo/lector/CamaraActivity;)V]
   + Methodref [es/ricardo/lector/d.<init> (Les/ricardo/lector/CamaraActivity;)V]
-  + Methodref [es/ricardo/lector/h.<init> (Les/ricardo/lector/CamaraActivity;)V]
+  + Methodref [es/ricardo/lector/e.<init> (Les/ricardo/lector/CamaraActivity;)V]
   + Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
   + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
   + Methodref [java/io/File.exists ()Z]
@@ -71904,7 +71902,7 @@ Constant Pool (count = 452):
   + Utf8 [es/ricardo/lector/CamaraActivity]
   + Utf8 [es/ricardo/lector/c]
   + Utf8 [es/ricardo/lector/d]
-  + Utf8 [es/ricardo/lector/h]
+  + Utf8 [es/ricardo/lector/e]
   + Utf8 [exists]
   + Utf8 [f]
   + Utf8 [findViewById]
@@ -72180,11 +72178,11 @@ Methods (count = 25):
       [196] invokevirtual #112
         + Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
       [199] new #52
-        + Class [es/ricardo/lector/h]
+        + Class [es/ricardo/lector/e]
       [202] dup
       [203] aload_0 v0
       [204] invokespecial #135
-        + Methodref [es/ricardo/lector/h.<init> (Les/ricardo/lector/CamaraActivity;)V]
+        + Methodref [es/ricardo/lector/e.<init> (Les/ricardo/lector/CamaraActivity;)V]
       [207] astore v7
       [209] aload_0 v0
       [210] ldc #25
@@ -72966,20 +72964,9 @@ Methods (count = 25):
       [5] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       a(Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;
+  + Method:       a(Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;
     Access flags: 0x1008
-      = static synthetic android.hardware.Camera a(es.ricardo.lector.CamaraActivity)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
-      [0] aload_0 v0
-      [1] getfield #66
-        + Fieldref [es/ricardo/lector/CamaraActivity.b Landroid/hardware/Camera;]
-      [4] areturn
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
-  + Method:       b(Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;
-    Access flags: 0x1008
-      = static synthetic android.widget.Button b(es.ricardo.lector.CamaraActivity)
+      = static synthetic android.widget.Button a(es.ricardo.lector.CamaraActivity)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
@@ -72988,9 +72975,9 @@ Methods (count = 25):
       [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       c(Les/ricardo/lector/CamaraActivity;)Ljava/lang/String;
+  + Method:       b(Les/ricardo/lector/CamaraActivity;)Ljava/lang/String;
     Access flags: 0x1008
-      = static synthetic java.lang.String c(es.ricardo.lector.CamaraActivity)
+      = static synthetic java.lang.String b(es.ricardo.lector.CamaraActivity)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
@@ -73011,14 +72998,25 @@ Methods (count = 25):
       [5] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       d(Les/ricardo/lector/CamaraActivity;)Landroid/media/MediaPlayer;
+  + Method:       c(Les/ricardo/lector/CamaraActivity;)Landroid/media/MediaPlayer;
     Access flags: 0x1008
-      = static synthetic android.media.MediaPlayer d(es.ricardo.lector.CamaraActivity)
+      = static synthetic android.media.MediaPlayer c(es.ricardo.lector.CamaraActivity)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
       [1] getfield #68
         + Fieldref [es/ricardo/lector/CamaraActivity.d Landroid/media/MediaPlayer;]
+      [4] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       d(Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;
+    Access flags: 0x1008
+      = static synthetic android.hardware.Camera d(es.ricardo.lector.CamaraActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #66
+        + Fieldref [es/ricardo/lector/CamaraActivity.b Landroid/hardware/Camera;]
       [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -73143,47 +73141,35 @@ _____________________________________________________________________
 Interfaces (count = 1):
   + Class [android/view/View$OnClickListener]
 
-Constant Pool (count = 61):
+Constant Pool (count = 45):
   + Class [android/hardware/Camera]
   + Class [android/view/View$OnClickListener]
   + Class [android/widget/Button]
   + Class [es/ricardo/lector/CamaraActivity]
   + Class [es/ricardo/lector/d]
-  + Class [es/ricardo/lector/e]
   + Class [es/ricardo/lector/f]
-  + Class [es/ricardo/lector/g]
-  + Class [es/ricardo/lector/i]
   + Class [java/lang/Object]
   + Fieldref [es/ricardo/lector/d.a Les/ricardo/lector/CamaraActivity;]
   + Methodref [android/hardware/Camera.autoFocus (Landroid/hardware/Camera$AutoFocusCallback;)V]
-  + Methodref [android/hardware/Camera.takePicture (Landroid/hardware/Camera$ShutterCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;)V]
   + Methodref [android/widget/Button.setEnabled (Z)V]
-  + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
-  + Methodref [es/ricardo/lector/CamaraActivity.b (Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;]
-  + Methodref [es/ricardo/lector/e.<init> (Les/ricardo/lector/d;)V]
-  + Methodref [es/ricardo/lector/f.<init> (Les/ricardo/lector/d;)V]
-  + Methodref [es/ricardo/lector/g.<init> (Les/ricardo/lector/d;)V]
-  + Methodref [es/ricardo/lector/i.<init> (Les/ricardo/lector/CamaraActivity;Les/ricardo/lector/i;)V]
+  + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;]
+  + Methodref [es/ricardo/lector/CamaraActivity.d (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
+  + Methodref [es/ricardo/lector/f.<init> (Les/ricardo/lector/CamaraActivity;Les/ricardo/lector/f;)V]
   + Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
-  + NameAndType [<init> (Les/ricardo/lector/CamaraActivity;Les/ricardo/lector/i;)V]
-  + NameAndType [<init> (Les/ricardo/lector/d;)V]
-  + NameAndType [a (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
+  + NameAndType [<init> (Les/ricardo/lector/CamaraActivity;Les/ricardo/lector/f;)V]
+  + NameAndType [a (Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;]
   + NameAndType [a Les/ricardo/lector/CamaraActivity;]
   + NameAndType [autoFocus (Landroid/hardware/Camera$AutoFocusCallback;)V]
-  + NameAndType [b (Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;]
+  + NameAndType [d (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
   + NameAndType [setEnabled (Z)V]
-  + NameAndType [takePicture (Landroid/hardware/Camera$ShutterCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;)V]
   + Utf8 [()V]
   + Utf8 [(Landroid/hardware/Camera$AutoFocusCallback;)V]
-  + Utf8 [(Landroid/hardware/Camera$ShutterCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;)V]
   + Utf8 [(Landroid/view/View;)V]
   + Utf8 [(Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
   + Utf8 [(Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;]
   + Utf8 [(Les/ricardo/lector/CamaraActivity;)V]
-  + Utf8 [(Les/ricardo/lector/CamaraActivity;Les/ricardo/lector/i;)V]
-  + Utf8 [(Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
-  + Utf8 [(Les/ricardo/lector/d;)V]
+  + Utf8 [(Les/ricardo/lector/CamaraActivity;Les/ricardo/lector/f;)V]
   + Utf8 [(Z)V]
   + Utf8 [<init>]
   + Utf8 [Code]
@@ -73193,24 +73179,20 @@ Constant Pool (count = 61):
   + Utf8 [android/view/View$OnClickListener]
   + Utf8 [android/widget/Button]
   + Utf8 [autoFocus]
-  + Utf8 [b]
+  + Utf8 [d]
   + Utf8 [es/ricardo/lector/CamaraActivity]
   + Utf8 [es/ricardo/lector/d]
-  + Utf8 [es/ricardo/lector/e]
   + Utf8 [es/ricardo/lector/f]
-  + Utf8 [es/ricardo/lector/g]
-  + Utf8 [es/ricardo/lector/i]
   + Utf8 [java/lang/Object]
   + Utf8 [onClick]
   + Utf8 [setEnabled]
-  + Utf8 [takePicture]
 
 Fields (count = 1):
   + Field:        a Les/ricardo/lector/CamaraActivity;
     Access flags: 0x1010
       = final synthetic es.ricardo.lector.CamaraActivity a
 
-Methods (count = 3):
+Methods (count = 2):
   - Method:       <init>(Les/ricardo/lector/CamaraActivity;)V
     Access flags: 0x0
       = d(es.ricardo.lector.CamaraActivity)
@@ -73218,10 +73200,10 @@ Methods (count = 3):
     + Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #11
+      [2] putfield #8
         + Fieldref [es/ricardo/lector/d.a Les/ricardo/lector/CamaraActivity;]
       [5] aload_0 v0
-      [6] invokespecial #21
+      [6] invokespecial #14
         + Methodref [java/lang/Object.<init> ()V]
       [9] return
       Code attribute exceptions (count = 0):
@@ -73230,76 +73212,34 @@ Methods (count = 3):
     Access flags: 0x1
       = public void onClick(android.view.View)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 80, locals = 6, stack = 4):
-      [0] new #9
-        + Class [es/ricardo/lector/i]
+    + Code attribute instructions (code length = 36, locals = 3, stack = 4):
+      [0] new #6
+        + Class [es/ricardo/lector/f]
       [3] dup
       [4] aload_0 v0
-      [5] getfield #11
+      [5] getfield #8
         + Fieldref [es/ricardo/lector/d.a Les/ricardo/lector/CamaraActivity;]
       [8] aconst_null
-      [9] invokespecial #20
-        + Methodref [es/ricardo/lector/i.<init> (Les/ricardo/lector/CamaraActivity;Les/ricardo/lector/i;)V]
+      [9] invokespecial #13
+        + Methodref [es/ricardo/lector/f.<init> (Les/ricardo/lector/CamaraActivity;Les/ricardo/lector/f;)V]
       [12] astore_2 v2
       [13] aload_0 v0
-      [14] getfield #11
+      [14] getfield #8
         + Fieldref [es/ricardo/lector/d.a Les/ricardo/lector/CamaraActivity;]
-      [17] invokestatic #15
-        + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
+      [17] invokestatic #12
+        + Methodref [es/ricardo/lector/CamaraActivity.d (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
       [20] aload_2 v2
-      [21] invokevirtual #12
+      [21] invokevirtual #9
         + Methodref [android/hardware/Camera.autoFocus (Landroid/hardware/Camera$AutoFocusCallback;)V]
-      [24] new #6
-        + Class [es/ricardo/lector/e]
-      [27] dup
-      [28] aload_0 v0
-      [29] invokespecial #17
-        + Methodref [es/ricardo/lector/e.<init> (Les/ricardo/lector/d;)V]
-      [32] astore_3 v3
-      [33] new #7
-        + Class [es/ricardo/lector/f]
-      [36] dup
-      [37] aload_0 v0
-      [38] invokespecial #18
-        + Methodref [es/ricardo/lector/f.<init> (Les/ricardo/lector/d;)V]
-      [41] astore v4
-      [43] new #8
-        + Class [es/ricardo/lector/g]
-      [46] dup
-      [47] aload_0 v0
-      [48] invokespecial #19
-        + Methodref [es/ricardo/lector/g.<init> (Les/ricardo/lector/d;)V]
-      [51] astore v5
-      [53] aload_0 v0
-      [54] getfield #11
+      [24] aload_0 v0
+      [25] getfield #8
         + Fieldref [es/ricardo/lector/d.a Les/ricardo/lector/CamaraActivity;]
-      [57] invokestatic #15
-        + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
-      [60] aload_3 v3
-      [61] aload v4
-      [63] aload v5
-      [65] invokevirtual #13
-        + Methodref [android/hardware/Camera.takePicture (Landroid/hardware/Camera$ShutterCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;)V]
-      [68] aload_0 v0
-      [69] getfield #11
-        + Fieldref [es/ricardo/lector/d.a Les/ricardo/lector/CamaraActivity;]
-      [72] invokestatic #16
-        + Methodref [es/ricardo/lector/CamaraActivity.b (Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;]
-      [75] iconst_0
-      [76] invokevirtual #14
+      [28] invokestatic #11
+        + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;]
+      [31] iconst_0
+      [32] invokevirtual #10
         + Methodref [android/widget/Button.setEnabled (Z)V]
-      [79] return
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
-  + Method:       a(Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;
-    Access flags: 0x1008
-      = static synthetic es.ricardo.lector.CamaraActivity a(es.ricardo.lector.d)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
-      [0] aload_0 v0
-      [1] getfield #11
-        + Fieldref [es/ricardo/lector/d.a Les/ricardo/lector/CamaraActivity;]
-      [4] areturn
+      [35] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
 
@@ -73314,80 +73254,200 @@ _____________________________________________________________________
     = class es.ricardo.lector.e extends java.lang.Object
 
 Interfaces (count = 1):
-  + Class [android/hardware/Camera$ShutterCallback]
+  + Class [android/hardware/SensorEventListener]
 
-Constant Pool (count = 33):
-  + Integer [2130968578]
-  + Class [android/hardware/Camera$ShutterCallback]
-  + Class [android/media/MediaPlayer]
-  + Class [es/ricardo/lector/d]
+Constant Pool (count = 67):
+  + String [window]
+  + Class [android/hardware/Camera]
+  + Class [android/hardware/SensorEvent]
+  + Class [android/hardware/SensorEventListener]
+  + Class [android/view/Display]
+  + Class [android/view/WindowManager]
+  + Class [es/ricardo/lector/CamaraActivity]
   + Class [es/ricardo/lector/e]
   + Class [java/lang/Object]
-  + Fieldref [es/ricardo/lector/e.a Les/ricardo/lector/d;]
-  + Methodref [android/media/MediaPlayer.create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
-  + Methodref [android/media/MediaPlayer.start ()V]
-  + Methodref [es/ricardo/lector/d.a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
+  + Fieldref [android/hardware/SensorEvent.values [F]
+  + Fieldref [es/ricardo/lector/e.a Les/ricardo/lector/CamaraActivity;]
+  + Methodref [android/hardware/Camera.setDisplayOrientation (I)V]
+  + Methodref [android/view/Display.getRotation ()I]
+  + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;F)V]
+  + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;I)V]
+  + Methodref [es/ricardo/lector/CamaraActivity.b (Les/ricardo/lector/CamaraActivity;F)V]
+  + Methodref [es/ricardo/lector/CamaraActivity.d (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
+  + Methodref [es/ricardo/lector/CamaraActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
   + Methodref [java/lang/Object.<init> ()V]
+  + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
   + NameAndType [<init> ()V]
-  + NameAndType [a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
-  + NameAndType [a Les/ricardo/lector/d;]
-  + NameAndType [create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
-  + NameAndType [start ()V]
+  + NameAndType [a (Les/ricardo/lector/CamaraActivity;F)V]
+  + NameAndType [a (Les/ricardo/lector/CamaraActivity;I)V]
+  + NameAndType [a Les/ricardo/lector/CamaraActivity;]
+  + NameAndType [b (Les/ricardo/lector/CamaraActivity;F)V]
+  + NameAndType [d (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
+  + NameAndType [getDefaultDisplay ()Landroid/view/Display;]
+  + NameAndType [getRotation ()I]
+  + NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  + NameAndType [setDisplayOrientation (I)V]
+  + NameAndType [values [F]
+  + Utf8 [()I]
+  + Utf8 [()Landroid/view/Display;]
   + Utf8 [()V]
-  + Utf8 [(Landroid/content/Context;I)Landroid/media/MediaPlayer;]
-  + Utf8 [(Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
-  + Utf8 [(Les/ricardo/lector/d;)V]
+  + Utf8 [(I)V]
+  + Utf8 [(Landroid/hardware/Sensor;I)V]
+  + Utf8 [(Landroid/hardware/SensorEvent;)V]
+  + Utf8 [(Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
+  + Utf8 [(Les/ricardo/lector/CamaraActivity;)V]
+  + Utf8 [(Les/ricardo/lector/CamaraActivity;F)V]
+  + Utf8 [(Les/ricardo/lector/CamaraActivity;I)V]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
   + Utf8 [<init>]
   + Utf8 [Code]
-  + Utf8 [Les/ricardo/lector/d;]
+  + Utf8 [Les/ricardo/lector/CamaraActivity;]
+  + Utf8 [StackMapTable]
+  + Utf8 [[F]
   + Utf8 [a]
-  + Utf8 [android/hardware/Camera$ShutterCallback]
-  + Utf8 [android/media/MediaPlayer]
-  + Utf8 [create]
-  + Utf8 [es/ricardo/lector/d]
+  + Utf8 [android/hardware/Camera]
+  + Utf8 [android/hardware/SensorEvent]
+  + Utf8 [android/hardware/SensorEventListener]
+  + Utf8 [android/view/Display]
+  + Utf8 [android/view/WindowManager]
+  + Utf8 [b]
+  + Utf8 [d]
+  + Utf8 [es/ricardo/lector/CamaraActivity]
   + Utf8 [es/ricardo/lector/e]
+  + Utf8 [getDefaultDisplay]
+  + Utf8 [getRotation]
+  + Utf8 [getSystemService]
   + Utf8 [java/lang/Object]
-  + Utf8 [onShutter]
-  + Utf8 [start]
+  + Utf8 [onAccuracyChanged]
+  + Utf8 [onSensorChanged]
+  + Utf8 [setDisplayOrientation]
+  + Utf8 [values]
+  + Utf8 [window]
 
 Fields (count = 1):
-  + Field:        a Les/ricardo/lector/d;
+  + Field:        a Les/ricardo/lector/CamaraActivity;
     Access flags: 0x1010
-      = final synthetic es.ricardo.lector.d a
+      = final synthetic es.ricardo.lector.CamaraActivity a
 
-Methods (count = 2):
-  - Method:       <init>(Les/ricardo/lector/d;)V
+Methods (count = 3):
+  - Method:       <init>(Les/ricardo/lector/CamaraActivity;)V
     Access flags: 0x0
-      = e(es.ricardo.lector.d)
+      = e(es.ricardo.lector.CamaraActivity)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #7
-        + Fieldref [es/ricardo/lector/e.a Les/ricardo/lector/d;]
+      [2] putfield #11
+        + Fieldref [es/ricardo/lector/e.a Les/ricardo/lector/CamaraActivity;]
       [5] aload_0 v0
-      [6] invokespecial #11
+      [6] invokespecial #19
         + Methodref [java/lang/Object.<init> ()V]
       [9] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       onShutter()V
+  + Method:       onSensorChanged(Landroid/hardware/SensorEvent;)V
     Access flags: 0x1
-      = public void onShutter()
+      = public void onSensorChanged(android.hardware.SensorEvent)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 16, locals = 1, stack = 2):
+    + Code attribute instructions (code length = 140, locals = 4, stack = 3):
       [0] aload_0 v0
-      [1] getfield #7
-        + Fieldref [es/ricardo/lector/e.a Les/ricardo/lector/d;]
-      [4] invokestatic #10
-        + Methodref [es/ricardo/lector/d.a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
-      [7] ldc #1
-        + Integer [2130968578]
-      [9] invokestatic #8
-        + Methodref [android/media/MediaPlayer.create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
-      [12] invokevirtual #9
-        + Methodref [android/media/MediaPlayer.start ()V]
-      [15] return
+      [1] getfield #11
+        + Fieldref [es/ricardo/lector/e.a Les/ricardo/lector/CamaraActivity;]
+      [4] aload_1 v1
+      [5] getfield #10
+        + Fieldref [android/hardware/SensorEvent.values [F]
+      [8] iconst_0
+      [9] faload
+      [10] invokestatic #14
+        + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;F)V]
+      [13] aload_0 v0
+      [14] getfield #11
+        + Fieldref [es/ricardo/lector/e.a Les/ricardo/lector/CamaraActivity;]
+      [17] aload_1 v1
+      [18] getfield #10
+        + Fieldref [android/hardware/SensorEvent.values [F]
+      [21] iconst_1
+      [22] faload
+      [23] invokestatic #16
+        + Methodref [es/ricardo/lector/CamaraActivity.b (Les/ricardo/lector/CamaraActivity;F)V]
+      [26] aload_0 v0
+      [27] getfield #11
+        + Fieldref [es/ricardo/lector/e.a Les/ricardo/lector/CamaraActivity;]
+      [30] ldc #1
+        + String [window]
+      [32] invokevirtual #18
+        + Methodref [es/ricardo/lector/CamaraActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [35] checkcast #6
+        + Class [android/view/WindowManager]
+      [38] astore_2 v2
+      [39] aload_2 v2
+      [40] invokeinterface #20
+        + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
+      [45] invokevirtual #13
+        + Methodref [android/view/Display.getRotation ()I]
+      [48] istore_3 v3
+      [49] iload_3 v3
+      [50] tableswitch (3 offsets, default=89) (target=139)
+        1: offset = 26, target = 76
+        2: offset = 89, target = 139
+        3: offset = 58, target = 108
+        default: offset = 89, target = 139
+      [76] aload_0 v0
+      [77] getfield #11
+        + Fieldref [es/ricardo/lector/e.a Les/ricardo/lector/CamaraActivity;]
+      [80] invokestatic #17
+        + Methodref [es/ricardo/lector/CamaraActivity.d (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
+      [83] ifnull +14 (target=97)
+      [86] aload_0 v0
+      [87] getfield #11
+        + Fieldref [es/ricardo/lector/e.a Les/ricardo/lector/CamaraActivity;]
+      [90] invokestatic #17
+        + Methodref [es/ricardo/lector/CamaraActivity.d (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
+      [93] iconst_0
+      [94] invokevirtual #12
+        + Methodref [android/hardware/Camera.setDisplayOrientation (I)V]
+      [97] aload_0 v0
+      [98] getfield #11
+        + Fieldref [es/ricardo/lector/e.a Les/ricardo/lector/CamaraActivity;]
+      [101] iload_3 v3
+      [102] invokestatic #15
+        + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;I)V]
+      [105] goto +34 (target=139)
+      [108] aload_0 v0
+      [109] getfield #11
+        + Fieldref [es/ricardo/lector/e.a Les/ricardo/lector/CamaraActivity;]
+      [112] invokestatic #17
+        + Methodref [es/ricardo/lector/CamaraActivity.d (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
+      [115] ifnull +16 (target=131)
+      [118] aload_0 v0
+      [119] getfield #11
+        + Fieldref [es/ricardo/lector/e.a Les/ricardo/lector/CamaraActivity;]
+      [122] invokestatic #17
+        + Methodref [es/ricardo/lector/CamaraActivity.d (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
+      [125] sipush 180
+      [128] invokevirtual #12
+        + Methodref [android/hardware/Camera.setDisplayOrientation (I)V]
+      [131] aload_0 v0
+      [132] getfield #11
+        + Fieldref [es/ricardo/lector/e.a Les/ricardo/lector/CamaraActivity;]
+      [135] iload_3 v3
+      [136] invokestatic #15
+        + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;I)V]
+      [139] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 5):
+        - [76] Var: ...[a:android/view/WindowManager][i], Stack: (empty)
+        - [97] Var: ..., Stack: (empty)
+        - [108] Var: ..., Stack: (empty)
+        - [131] Var: ..., Stack: (empty)
+        - [139] Var: ..., Stack: (empty)
+  + Method:       onAccuracyChanged(Landroid/hardware/Sensor;I)V
+    Access flags: 0x1
+      = public void onAccuracyChanged(android.hardware.Sensor,int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 1, locals = 3, stack = 0):
+      [0] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
 
@@ -73402,62 +73462,338 @@ _____________________________________________________________________
     = class es.ricardo.lector.f extends java.lang.Object
 
 Interfaces (count = 1):
+  + Class [android/hardware/Camera$AutoFocusCallback]
+
+Constant Pool (count = 65):
+  + Integer [2130968576]
+  + Class [android/hardware/Camera]
+  + Class [android/hardware/Camera$AutoFocusCallback]
+  + Class [android/hardware/Camera$PictureCallback]
+  + Class [android/hardware/Camera$ShutterCallback]
+  + Class [android/media/MediaPlayer]
+  + Class [es/ricardo/lector/CamaraActivity]
+  + Class [es/ricardo/lector/f]
+  + Class [es/ricardo/lector/g]
+  + Class [es/ricardo/lector/h]
+  + Class [es/ricardo/lector/i]
+  + Class [java/lang/Object]
+  + Fieldref [es/ricardo/lector/f.a Les/ricardo/lector/CamaraActivity;]
+  + Fieldref [es/ricardo/lector/f.b Z]
+  + Methodref [android/hardware/Camera.takePicture (Landroid/hardware/Camera$ShutterCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;)V]
+  + Methodref [android/media/MediaPlayer.create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
+  + Methodref [android/media/MediaPlayer.start ()V]
+  + Methodref [es/ricardo/lector/CamaraActivity.d (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
+  + Methodref [es/ricardo/lector/f.<init> (Les/ricardo/lector/CamaraActivity;)V]
+  + Methodref [es/ricardo/lector/g.<init> (Les/ricardo/lector/f;)V]
+  + Methodref [es/ricardo/lector/h.<init> (Les/ricardo/lector/f;)V]
+  + Methodref [es/ricardo/lector/i.<init> (Les/ricardo/lector/f;)V]
+  + Methodref [java/lang/Object.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Les/ricardo/lector/CamaraActivity;)V]
+  + NameAndType [<init> (Les/ricardo/lector/f;)V]
+  + NameAndType [a Les/ricardo/lector/CamaraActivity;]
+  + NameAndType [b Z]
+  + NameAndType [create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
+  + NameAndType [d (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
+  + NameAndType [start ()V]
+  + NameAndType [takePicture (Landroid/hardware/Camera$ShutterCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;)V]
+  + Utf8 [()V]
+  + Utf8 [(Landroid/content/Context;I)Landroid/media/MediaPlayer;]
+  + Utf8 [(Landroid/hardware/Camera$ShutterCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;)V]
+  + Utf8 [(Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
+  + Utf8 [(Les/ricardo/lector/CamaraActivity;)V]
+  + Utf8 [(Les/ricardo/lector/CamaraActivity;Les/ricardo/lector/f;)V]
+  + Utf8 [(Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
+  + Utf8 [(Les/ricardo/lector/f;)V]
+  + Utf8 [(ZLandroid/hardware/Camera;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Les/ricardo/lector/CamaraActivity;]
+  + Utf8 [StackMapTable]
+  + Utf8 [Z]
+  + Utf8 [a]
+  + Utf8 [android/hardware/Camera]
+  + Utf8 [android/hardware/Camera$AutoFocusCallback]
+  + Utf8 [android/hardware/Camera$PictureCallback]
+  + Utf8 [android/hardware/Camera$ShutterCallback]
+  + Utf8 [android/media/MediaPlayer]
+  + Utf8 [b]
+  + Utf8 [create]
+  + Utf8 [d]
+  + Utf8 [es/ricardo/lector/CamaraActivity]
+  + Utf8 [es/ricardo/lector/f]
+  + Utf8 [es/ricardo/lector/g]
+  + Utf8 [es/ricardo/lector/h]
+  + Utf8 [es/ricardo/lector/i]
+  + Utf8 [java/lang/Object]
+  + Utf8 [onAutoFocus]
+  + Utf8 [start]
+  + Utf8 [takePicture]
+
+Fields (count = 2):
+  + Field:        b Z
+    Access flags: 0x2
+      = private boolean b
+  + Field:        a Les/ricardo/lector/CamaraActivity;
+    Access flags: 0x1010
+      = final synthetic es.ricardo.lector.CamaraActivity a
+
+Methods (count = 4):
+  - Method:       <init>(Les/ricardo/lector/CamaraActivity;)V
+    Access flags: 0x2
+      = private f(es.ricardo.lector.CamaraActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 15, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #13
+        + Fieldref [es/ricardo/lector/f.a Les/ricardo/lector/CamaraActivity;]
+      [5] aload_0 v0
+      [6] invokespecial #23
+        + Methodref [java/lang/Object.<init> ()V]
+      [9] aload_0 v0
+      [10] iconst_0
+      [11] putfield #14
+        + Fieldref [es/ricardo/lector/f.b Z]
+      [14] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onAutoFocus(ZLandroid/hardware/Camera;)V
+    Access flags: 0x1
+      = public void onAutoFocus(boolean,android.hardware.Camera)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 69, locals = 6, stack = 4):
+      [0] new #9
+        + Class [es/ricardo/lector/g]
+      [3] dup
+      [4] aload_0 v0
+      [5] invokespecial #20
+        + Methodref [es/ricardo/lector/g.<init> (Les/ricardo/lector/f;)V]
+      [8] astore_3 v3
+      [9] new #10
+        + Class [es/ricardo/lector/h]
+      [12] dup
+      [13] aload_0 v0
+      [14] invokespecial #21
+        + Methodref [es/ricardo/lector/h.<init> (Les/ricardo/lector/f;)V]
+      [17] astore v4
+      [19] new #11
+        + Class [es/ricardo/lector/i]
+      [22] dup
+      [23] aload_0 v0
+      [24] invokespecial #22
+        + Methodref [es/ricardo/lector/i.<init> (Les/ricardo/lector/f;)V]
+      [27] astore v5
+      [29] aload_0 v0
+      [30] iload_1 v1
+      [31] putfield #14
+        + Fieldref [es/ricardo/lector/f.b Z]
+      [34] aload_0 v0
+      [35] getfield #14
+        + Fieldref [es/ricardo/lector/f.b Z]
+      [38] ifeq +15 (target=53)
+      [41] aload_0 v0
+      [42] getfield #13
+        + Fieldref [es/ricardo/lector/f.a Les/ricardo/lector/CamaraActivity;]
+      [45] ldc #1
+        + Integer [2130968576]
+      [47] invokestatic #16
+        + Methodref [android/media/MediaPlayer.create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
+      [50] invokevirtual #17
+        + Methodref [android/media/MediaPlayer.start ()V]
+      [53] aload_0 v0
+      [54] getfield #13
+        + Fieldref [es/ricardo/lector/f.a Les/ricardo/lector/CamaraActivity;]
+      [57] invokestatic #18
+        + Methodref [es/ricardo/lector/CamaraActivity.d (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
+      [60] aload_3 v3
+      [61] aload v4
+      [63] aload v5
+      [65] invokevirtual #15
+        + Methodref [android/hardware/Camera.takePicture (Landroid/hardware/Camera$ShutterCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;)V]
+      [68] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [53] Var: ...[a:android/hardware/Camera$ShutterCallback][a:android/hardware/Camera$PictureCallback][a:android/hardware/Camera$PictureCallback], Stack: (empty)
+  - Method:       <init>(Les/ricardo/lector/CamaraActivity;Les/ricardo/lector/f;)V
+    Access flags: 0x1000
+      = synthetic f(es.ricardo.lector.CamaraActivity,es.ricardo.lector.f)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 6, locals = 3, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #19
+        + Methodref [es/ricardo/lector/f.<init> (Les/ricardo/lector/CamaraActivity;)V]
+      [5] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;
+    Access flags: 0x1008
+      = static synthetic es.ricardo.lector.CamaraActivity a(es.ricardo.lector.f)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #13
+        + Fieldref [es/ricardo/lector/f.a Les/ricardo/lector/CamaraActivity;]
+      [4] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: es/ricardo/lector/g
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x20
+    = class es.ricardo.lector.g extends java.lang.Object
+
+Interfaces (count = 1):
+  + Class [android/hardware/Camera$ShutterCallback]
+
+Constant Pool (count = 33):
+  + Integer [2130968578]
+  + Class [android/hardware/Camera$ShutterCallback]
+  + Class [android/media/MediaPlayer]
+  + Class [es/ricardo/lector/f]
+  + Class [es/ricardo/lector/g]
+  + Class [java/lang/Object]
+  + Fieldref [es/ricardo/lector/g.a Les/ricardo/lector/f;]
+  + Methodref [android/media/MediaPlayer.create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
+  + Methodref [android/media/MediaPlayer.start ()V]
+  + Methodref [es/ricardo/lector/f.a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
+  + Methodref [java/lang/Object.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
+  + NameAndType [a Les/ricardo/lector/f;]
+  + NameAndType [create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
+  + NameAndType [start ()V]
+  + Utf8 [()V]
+  + Utf8 [(Landroid/content/Context;I)Landroid/media/MediaPlayer;]
+  + Utf8 [(Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
+  + Utf8 [(Les/ricardo/lector/f;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Les/ricardo/lector/f;]
+  + Utf8 [a]
+  + Utf8 [android/hardware/Camera$ShutterCallback]
+  + Utf8 [android/media/MediaPlayer]
+  + Utf8 [create]
+  + Utf8 [es/ricardo/lector/f]
+  + Utf8 [es/ricardo/lector/g]
+  + Utf8 [java/lang/Object]
+  + Utf8 [onShutter]
+  + Utf8 [start]
+
+Fields (count = 1):
+  + Field:        a Les/ricardo/lector/f;
+    Access flags: 0x1010
+      = final synthetic es.ricardo.lector.f a
+
+Methods (count = 2):
+  - Method:       <init>(Les/ricardo/lector/f;)V
+    Access flags: 0x0
+      = g(es.ricardo.lector.f)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #7
+        + Fieldref [es/ricardo/lector/g.a Les/ricardo/lector/f;]
+      [5] aload_0 v0
+      [6] invokespecial #11
+        + Methodref [java/lang/Object.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onShutter()V
+    Access flags: 0x1
+      = public void onShutter()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 16, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #7
+        + Fieldref [es/ricardo/lector/g.a Les/ricardo/lector/f;]
+      [4] invokestatic #10
+        + Methodref [es/ricardo/lector/f.a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
+      [7] ldc #1
+        + Integer [2130968578]
+      [9] invokestatic #8
+        + Methodref [android/media/MediaPlayer.create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
+      [12] invokevirtual #9
+        + Methodref [android/media/MediaPlayer.start ()V]
+      [15] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: es/ricardo/lector/h
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x20
+    = class es.ricardo.lector.h extends java.lang.Object
+
+Interfaces (count = 1):
   + Class [android/hardware/Camera$PictureCallback]
 
-Constant Pool (count = 38):
+Constant Pool (count = 37):
   + String []
   + Class [android/hardware/Camera$PictureCallback]
   + Class [android/widget/Button]
   + Class [es/ricardo/lector/CamaraActivity]
-  + Class [es/ricardo/lector/d]
   + Class [es/ricardo/lector/f]
+  + Class [es/ricardo/lector/h]
   + Class [java/lang/Object]
-  + Fieldref [es/ricardo/lector/f.a Les/ricardo/lector/d;]
+  + Fieldref [es/ricardo/lector/h.a Les/ricardo/lector/f;]
   + Methodref [android/widget/Button.setText (Ljava/lang/CharSequence;)V]
-  + Methodref [es/ricardo/lector/CamaraActivity.b (Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;]
-  + Methodref [es/ricardo/lector/d.a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
+  + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;]
+  + Methodref [es/ricardo/lector/f.a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
   + Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
-  + NameAndType [a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
-  + NameAndType [a Les/ricardo/lector/d;]
-  + NameAndType [b (Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;]
+  + NameAndType [a (Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;]
+  + NameAndType [a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
+  + NameAndType [a Les/ricardo/lector/f;]
   + NameAndType [setText (Ljava/lang/CharSequence;)V]
   + Utf8 []
   + Utf8 [()V]
   + Utf8 [(Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;]
-  + Utf8 [(Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
-  + Utf8 [(Les/ricardo/lector/d;)V]
+  + Utf8 [(Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
+  + Utf8 [(Les/ricardo/lector/f;)V]
   + Utf8 [(Ljava/lang/CharSequence;)V]
   + Utf8 [([BLandroid/hardware/Camera;)V]
   + Utf8 [<init>]
   + Utf8 [Code]
-  + Utf8 [Les/ricardo/lector/d;]
+  + Utf8 [Les/ricardo/lector/f;]
   + Utf8 [a]
   + Utf8 [android/hardware/Camera$PictureCallback]
   + Utf8 [android/widget/Button]
-  + Utf8 [b]
   + Utf8 [es/ricardo/lector/CamaraActivity]
-  + Utf8 [es/ricardo/lector/d]
   + Utf8 [es/ricardo/lector/f]
+  + Utf8 [es/ricardo/lector/h]
   + Utf8 [java/lang/Object]
   + Utf8 [onPictureTaken]
   + Utf8 [setText]
 
 Fields (count = 1):
-  + Field:        a Les/ricardo/lector/d;
+  + Field:        a Les/ricardo/lector/f;
     Access flags: 0x1010
-      = final synthetic es.ricardo.lector.d a
+      = final synthetic es.ricardo.lector.f a
 
 Methods (count = 2):
-  - Method:       <init>(Les/ricardo/lector/d;)V
+  - Method:       <init>(Les/ricardo/lector/f;)V
     Access flags: 0x0
-      = f(es.ricardo.lector.d)
+      = h(es.ricardo.lector.f)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #8
-        + Fieldref [es/ricardo/lector/f.a Les/ricardo/lector/d;]
+        + Fieldref [es/ricardo/lector/h.a Les/ricardo/lector/f;]
       [5] aload_0 v0
       [6] invokespecial #12
         + Methodref [java/lang/Object.<init> ()V]
@@ -73471,11 +73807,11 @@ Methods (count = 2):
     + Code attribute instructions (code length = 16, locals = 3, stack = 2):
       [0] aload_0 v0
       [1] getfield #8
-        + Fieldref [es/ricardo/lector/f.a Les/ricardo/lector/d;]
+        + Fieldref [es/ricardo/lector/h.a Les/ricardo/lector/f;]
       [4] invokestatic #11
-        + Methodref [es/ricardo/lector/d.a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
+        + Methodref [es/ricardo/lector/f.a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
       [7] invokestatic #10
-        + Methodref [es/ricardo/lector/CamaraActivity.b (Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;]
+        + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;)Landroid/widget/Button;]
       [10] ldc #1
         + String []
       [12] invokevirtual #9
@@ -73487,12 +73823,12 @@ Methods (count = 2):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-+ Program class: es/ricardo/lector/g
++ Program class: es/ricardo/lector/i
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x20
-    = class es.ricardo.lector.g extends java.lang.Object
+    = class es.ricardo.lector.i extends java.lang.Object
 
 Interfaces (count = 1):
   + Class [android/hardware/Camera$PictureCallback]
@@ -73515,8 +73851,8 @@ Constant Pool (count = 171):
   + Class [android/preference/PreferenceManager]
   + Class [es/ricardo/lector/CamaraActivity]
   + Class [es/ricardo/lector/ResultadoActivity]
-  + Class [es/ricardo/lector/d]
-  + Class [es/ricardo/lector/g]
+  + Class [es/ricardo/lector/f]
+  + Class [es/ricardo/lector/i]
   + Class [java/io/FileOutputStream]
   + Class [java/lang/Exception]
   + Class [java/lang/Integer]
@@ -73527,7 +73863,7 @@ Constant Pool (count = 171):
   + Fieldref [android/graphics/BitmapFactory$Options.inSampleSize I]
   + Fieldref [android/graphics/BitmapFactory$Options.outHeight I]
   + Fieldref [android/graphics/BitmapFactory$Options.outWidth I]
-  + Fieldref [es/ricardo/lector/g.a Les/ricardo/lector/d;]
+  + Fieldref [es/ricardo/lector/i.a Les/ricardo/lector/f;]
   + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
   + Methodref [android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z]
   + Methodref [android/graphics/Bitmap.createBitmap (Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;]
@@ -73543,12 +73879,12 @@ Constant Pool (count = 171):
   + Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
   + Methodref [es/ricardo/lector/CamaraActivity.a ()Landroid/net/Uri;]
   + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;Landroid/media/MediaPlayer;)V]
-  + Methodref [es/ricardo/lector/CamaraActivity.c (Les/ricardo/lector/CamaraActivity;)Ljava/lang/String;]
-  + Methodref [es/ricardo/lector/CamaraActivity.d (Les/ricardo/lector/CamaraActivity;)Landroid/media/MediaPlayer;]
+  + Methodref [es/ricardo/lector/CamaraActivity.b (Les/ricardo/lector/CamaraActivity;)Ljava/lang/String;]
+  + Methodref [es/ricardo/lector/CamaraActivity.c (Les/ricardo/lector/CamaraActivity;)Landroid/media/MediaPlayer;]
   + Methodref [es/ricardo/lector/CamaraActivity.getString (I)Ljava/lang/String;]
   + Methodref [es/ricardo/lector/CamaraActivity.startActivityForResult (Landroid/content/Intent;I)V]
-  + Methodref [es/ricardo/lector/d.a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
-  + Methodref [es/ricardo/lector/g.a ([B)V]
+  + Methodref [es/ricardo/lector/f.a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
+  + Methodref [es/ricardo/lector/i.a ([B)V]
   + Methodref [java/io/FileOutputStream.<init> (Ljava/lang/String;)V]
   + Methodref [java/io/FileOutputStream.close ()V]
   + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
@@ -73562,16 +73898,16 @@ Constant Pool (count = 171):
   + NameAndType [JPEG Landroid/graphics/Bitmap$CompressFormat;]
   + NameAndType [a ()Landroid/net/Uri;]
   + NameAndType [a (Les/ricardo/lector/CamaraActivity;Landroid/media/MediaPlayer;)V]
-  + NameAndType [a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
+  + NameAndType [a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
   + NameAndType [a ([B)V]
-  + NameAndType [a Les/ricardo/lector/d;]
-  + NameAndType [c (Les/ricardo/lector/CamaraActivity;)Ljava/lang/String;]
+  + NameAndType [a Les/ricardo/lector/f;]
+  + NameAndType [b (Les/ricardo/lector/CamaraActivity;)Ljava/lang/String;]
+  + NameAndType [c (Les/ricardo/lector/CamaraActivity;)Landroid/media/MediaPlayer;]
   + NameAndType [close ()V]
   + NameAndType [commit ()Z]
   + NameAndType [compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z]
   + NameAndType [create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
   + NameAndType [createBitmap (Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;]
-  + NameAndType [d (Les/ricardo/lector/CamaraActivity;)Landroid/media/MediaPlayer;]
   + NameAndType [decodeByteArray ([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;]
   + NameAndType [edit ()Landroid/content/SharedPreferences$Editor;]
   + NameAndType [getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
@@ -73605,8 +73941,8 @@ Constant Pool (count = 171):
   + Utf8 [(Les/ricardo/lector/CamaraActivity;)Landroid/media/MediaPlayer;]
   + Utf8 [(Les/ricardo/lector/CamaraActivity;)Ljava/lang/String;]
   + Utf8 [(Les/ricardo/lector/CamaraActivity;Landroid/media/MediaPlayer;)V]
-  + Utf8 [(Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
-  + Utf8 [(Les/ricardo/lector/d;)V]
+  + Utf8 [(Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
+  + Utf8 [(Les/ricardo/lector/f;)V]
   + Utf8 [(Ljava/lang/String;)I]
   + Utf8 [(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;]
   + Utf8 [(Ljava/lang/String;)V]
@@ -73618,7 +73954,7 @@ Constant Pool (count = 171):
   + Utf8 [I]
   + Utf8 [JPEG]
   + Utf8 [Landroid/graphics/Bitmap$CompressFormat;]
-  + Utf8 [Les/ricardo/lector/d;]
+  + Utf8 [Les/ricardo/lector/f;]
   + Utf8 [StackMapTable]
   + Utf8 [Z]
   + Utf8 [[B]
@@ -73635,19 +73971,19 @@ Constant Pool (count = 171):
   + Utf8 [android/media/MediaPlayer]
   + Utf8 [android/net/Uri]
   + Utf8 [android/preference/PreferenceManager]
+  + Utf8 [b]
   + Utf8 [c]
   + Utf8 [close]
   + Utf8 [commit]
   + Utf8 [compress]
   + Utf8 [create]
   + Utf8 [createBitmap]
-  + Utf8 [d]
   + Utf8 [decodeByteArray]
   + Utf8 [edit]
   + Utf8 [es/ricardo/lector/CamaraActivity]
   + Utf8 [es/ricardo/lector/ResultadoActivity]
-  + Utf8 [es/ricardo/lector/d]
-  + Utf8 [es/ricardo/lector/g]
+  + Utf8 [es/ricardo/lector/f]
+  + Utf8 [es/ricardo/lector/i]
   + Utf8 [getDefaultSharedPreferences]
   + Utf8 [getHeight]
   + Utf8 [getPath]
@@ -73670,20 +74006,20 @@ Constant Pool (count = 171):
   + Utf8 [startActivityForResult]
 
 Fields (count = 1):
-  + Field:        a Les/ricardo/lector/d;
+  + Field:        a Les/ricardo/lector/f;
     Access flags: 0x1010
-      = final synthetic es.ricardo.lector.d a
+      = final synthetic es.ricardo.lector.f a
 
 Methods (count = 3):
-  - Method:       <init>(Les/ricardo/lector/d;)V
+  - Method:       <init>(Les/ricardo/lector/f;)V
     Access flags: 0x0
-      = g(es.ricardo.lector.d)
+      = i(es.ricardo.lector.f)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #30
-        + Fieldref [es/ricardo/lector/g.a Les/ricardo/lector/d;]
+        + Fieldref [es/ricardo/lector/i.a Les/ricardo/lector/f;]
       [5] aload_0 v0
       [6] invokespecial #55
         + Methodref [java/lang/Object.<init> ()V]
@@ -73700,7 +74036,7 @@ Methods (count = 3):
       [4] aload_0 v0
       [5] aload_1 v1
       [6] invokevirtual #51
-        + Methodref [es/ricardo/lector/g.a ([B)V]
+        + Methodref [es/ricardo/lector/i.a ([B)V]
       [9] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
@@ -73715,9 +74051,9 @@ Methods (count = 3):
       [1] astore_2 v2
       [2] aload_0 v0
       [3] getfield #30
-        + Fieldref [es/ricardo/lector/g.a Les/ricardo/lector/d;]
+        + Fieldref [es/ricardo/lector/i.a Les/ricardo/lector/f;]
       [6] invokestatic #50
-        + Methodref [es/ricardo/lector/d.a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
+        + Methodref [es/ricardo/lector/f.a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
       [9] invokevirtual #44
         + Methodref [es/ricardo/lector/CamaraActivity.a ()Landroid/net/Uri;]
       [12] invokevirtual #42
@@ -73802,11 +74138,11 @@ Methods (count = 3):
       [136] aload v10
       [138] aload_0 v0
       [139] getfield #30
-        + Fieldref [es/ricardo/lector/g.a Les/ricardo/lector/d;]
+        + Fieldref [es/ricardo/lector/i.a Les/ricardo/lector/f;]
       [142] invokestatic #50
-        + Methodref [es/ricardo/lector/d.a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
+        + Methodref [es/ricardo/lector/f.a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
       [145] invokestatic #46
-        + Methodref [es/ricardo/lector/CamaraActivity.c (Les/ricardo/lector/CamaraActivity;)Ljava/lang/String;]
+        + Methodref [es/ricardo/lector/CamaraActivity.b (Les/ricardo/lector/CamaraActivity;)Ljava/lang/String;]
       [148] invokestatic #54
         + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
       [151] i2f
@@ -73842,14 +74178,14 @@ Methods (count = 3):
       [199] astore v4
       [201] aload_0 v0
       [202] getfield #30
-        + Fieldref [es/ricardo/lector/g.a Les/ricardo/lector/d;]
+        + Fieldref [es/ricardo/lector/i.a Les/ricardo/lector/f;]
       [205] invokestatic #50
-        + Methodref [es/ricardo/lector/d.a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
+        + Methodref [es/ricardo/lector/f.a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
       [208] aload_0 v0
       [209] getfield #30
-        + Fieldref [es/ricardo/lector/g.a Les/ricardo/lector/d;]
+        + Fieldref [es/ricardo/lector/i.a Les/ricardo/lector/f;]
       [212] invokestatic #50
-        + Methodref [es/ricardo/lector/d.a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
+        + Methodref [es/ricardo/lector/f.a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
       [215] ldc #1
         + Integer [2130968582]
       [217] invokestatic #40
@@ -73858,11 +74194,11 @@ Methods (count = 3):
         + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;Landroid/media/MediaPlayer;)V]
       [223] aload_0 v0
       [224] getfield #30
-        + Fieldref [es/ricardo/lector/g.a Les/ricardo/lector/d;]
+        + Fieldref [es/ricardo/lector/i.a Les/ricardo/lector/f;]
       [227] invokestatic #50
-        + Methodref [es/ricardo/lector/d.a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
+        + Methodref [es/ricardo/lector/f.a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
       [230] invokestatic #47
-        + Methodref [es/ricardo/lector/CamaraActivity.d (Les/ricardo/lector/CamaraActivity;)Landroid/media/MediaPlayer;]
+        + Methodref [es/ricardo/lector/CamaraActivity.c (Les/ricardo/lector/CamaraActivity;)Landroid/media/MediaPlayer;]
       [233] invokevirtual #41
         + Methodref [android/media/MediaPlayer.start ()V]
       [236] aload v4
@@ -73871,9 +74207,9 @@ Methods (count = 3):
       [240] ifnonnull +83 (target=323)
       [243] aload_0 v0
       [244] getfield #30
-        + Fieldref [es/ricardo/lector/g.a Les/ricardo/lector/d;]
+        + Fieldref [es/ricardo/lector/i.a Les/ricardo/lector/f;]
       [247] invokestatic #50
-        + Methodref [es/ricardo/lector/d.a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
+        + Methodref [es/ricardo/lector/f.a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
       [250] invokestatic #43
         + Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
       [253] astore v4
@@ -73884,9 +74220,9 @@ Methods (count = 3):
       [264] aload v5
       [266] aload_0 v0
       [267] getfield #30
-        + Fieldref [es/ricardo/lector/g.a Les/ricardo/lector/d;]
+        + Fieldref [es/ricardo/lector/i.a Les/ricardo/lector/f;]
       [270] invokestatic #50
-        + Methodref [es/ricardo/lector/d.a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
+        + Methodref [es/ricardo/lector/f.a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
       [273] ldc #2
         + Integer [2131165189]
       [275] invokevirtual #48
@@ -73903,9 +74239,9 @@ Methods (count = 3):
       [295] dup
       [296] aload_0 v0
       [297] getfield #30
-        + Fieldref [es/ricardo/lector/g.a Les/ricardo/lector/d;]
+        + Fieldref [es/ricardo/lector/i.a Les/ricardo/lector/f;]
       [300] invokestatic #50
-        + Methodref [es/ricardo/lector/d.a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
+        + Methodref [es/ricardo/lector/f.a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
       [303] ldc #17
         + Class [es/ricardo/lector/ResultadoActivity]
       [305] invokespecial #31
@@ -73913,9 +74249,9 @@ Methods (count = 3):
       [308] astore v6
       [310] aload_0 v0
       [311] getfield #30
-        + Fieldref [es/ricardo/lector/g.a Les/ricardo/lector/d;]
+        + Fieldref [es/ricardo/lector/i.a Les/ricardo/lector/f;]
       [314] invokestatic #50
-        + Methodref [es/ricardo/lector/d.a (Les/ricardo/lector/d;)Les/ricardo/lector/CamaraActivity;]
+        + Methodref [es/ricardo/lector/f.a (Les/ricardo/lector/f;)Les/ricardo/lector/CamaraActivity;]
       [317] aload v6
       [319] iconst_1
       [320] invokevirtual #49
@@ -73926,338 +74262,12 @@ Methods (count = 3):
       + Class [java/lang/Exception]
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 6):
-        - [62] Var: [a:es/ricardo/lector/g][a:[B][a:java/lang/Exception][a:java/lang/String][a:java/io/FileOutputStream][a:android/graphics/BitmapFactory$Options][i][i], Stack: 
+        - [62] Var: [a:es/ricardo/lector/i][a:[B][a:java/lang/Exception][a:java/lang/String][a:java/io/FileOutputStream][a:android/graphics/BitmapFactory$Options][i][i], Stack: 
         - [68] Var: ..., Stack: (empty)
         - [100] Var: ..., Stack: (empty)
-        - [199] Var: [a:es/ricardo/lector/g][a:[B][a:java/lang/Exception][a:java/lang/String], Stack: [a:java/lang/Exception]
+        - [199] Var: [a:es/ricardo/lector/i][a:[B][a:java/lang/Exception][a:java/lang/String], Stack: [a:java/lang/Exception]
         - [239] Var: ..., Stack: (empty)
         - [323] Var: ..., Stack: (empty)
-
-Class file attributes (count = 0):
-
-_____________________________________________________________________
-+ Program class: es/ricardo/lector/h
-  Superclass:    java/lang/Object
-  Major version: 0x32
-  Minor version: 0x0
-  Access flags:  0x20
-    = class es.ricardo.lector.h extends java.lang.Object
-
-Interfaces (count = 1):
-  + Class [android/hardware/SensorEventListener]
-
-Constant Pool (count = 66):
-  + String [window]
-  + Class [android/hardware/Camera]
-  + Class [android/hardware/SensorEvent]
-  + Class [android/hardware/SensorEventListener]
-  + Class [android/view/Display]
-  + Class [android/view/WindowManager]
-  + Class [es/ricardo/lector/CamaraActivity]
-  + Class [es/ricardo/lector/h]
-  + Class [java/lang/Object]
-  + Fieldref [android/hardware/SensorEvent.values [F]
-  + Fieldref [es/ricardo/lector/h.a Les/ricardo/lector/CamaraActivity;]
-  + Methodref [android/hardware/Camera.setDisplayOrientation (I)V]
-  + Methodref [android/view/Display.getRotation ()I]
-  + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
-  + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;F)V]
-  + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;I)V]
-  + Methodref [es/ricardo/lector/CamaraActivity.b (Les/ricardo/lector/CamaraActivity;F)V]
-  + Methodref [es/ricardo/lector/CamaraActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-  + Methodref [java/lang/Object.<init> ()V]
-  + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
-  + NameAndType [<init> ()V]
-  + NameAndType [a (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
-  + NameAndType [a (Les/ricardo/lector/CamaraActivity;F)V]
-  + NameAndType [a (Les/ricardo/lector/CamaraActivity;I)V]
-  + NameAndType [a Les/ricardo/lector/CamaraActivity;]
-  + NameAndType [b (Les/ricardo/lector/CamaraActivity;F)V]
-  + NameAndType [getDefaultDisplay ()Landroid/view/Display;]
-  + NameAndType [getRotation ()I]
-  + NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-  + NameAndType [setDisplayOrientation (I)V]
-  + NameAndType [values [F]
-  + Utf8 [()I]
-  + Utf8 [()Landroid/view/Display;]
-  + Utf8 [()V]
-  + Utf8 [(I)V]
-  + Utf8 [(Landroid/hardware/Sensor;I)V]
-  + Utf8 [(Landroid/hardware/SensorEvent;)V]
-  + Utf8 [(Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
-  + Utf8 [(Les/ricardo/lector/CamaraActivity;)V]
-  + Utf8 [(Les/ricardo/lector/CamaraActivity;F)V]
-  + Utf8 [(Les/ricardo/lector/CamaraActivity;I)V]
-  + Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
-  + Utf8 [<init>]
-  + Utf8 [Code]
-  + Utf8 [Les/ricardo/lector/CamaraActivity;]
-  + Utf8 [StackMapTable]
-  + Utf8 [[F]
-  + Utf8 [a]
-  + Utf8 [android/hardware/Camera]
-  + Utf8 [android/hardware/SensorEvent]
-  + Utf8 [android/hardware/SensorEventListener]
-  + Utf8 [android/view/Display]
-  + Utf8 [android/view/WindowManager]
-  + Utf8 [b]
-  + Utf8 [es/ricardo/lector/CamaraActivity]
-  + Utf8 [es/ricardo/lector/h]
-  + Utf8 [getDefaultDisplay]
-  + Utf8 [getRotation]
-  + Utf8 [getSystemService]
-  + Utf8 [java/lang/Object]
-  + Utf8 [onAccuracyChanged]
-  + Utf8 [onSensorChanged]
-  + Utf8 [setDisplayOrientation]
-  + Utf8 [values]
-  + Utf8 [window]
-
-Fields (count = 1):
-  + Field:        a Les/ricardo/lector/CamaraActivity;
-    Access flags: 0x1010
-      = final synthetic es.ricardo.lector.CamaraActivity a
-
-Methods (count = 3):
-  - Method:       <init>(Les/ricardo/lector/CamaraActivity;)V
-    Access flags: 0x0
-      = h(es.ricardo.lector.CamaraActivity)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 10, locals = 2, stack = 2):
-      [0] aload_0 v0
-      [1] aload_1 v1
-      [2] putfield #11
-        + Fieldref [es/ricardo/lector/h.a Les/ricardo/lector/CamaraActivity;]
-      [5] aload_0 v0
-      [6] invokespecial #19
-        + Methodref [java/lang/Object.<init> ()V]
-      [9] return
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
-  + Method:       onSensorChanged(Landroid/hardware/SensorEvent;)V
-    Access flags: 0x1
-      = public void onSensorChanged(android.hardware.SensorEvent)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 140, locals = 4, stack = 3):
-      [0] aload_0 v0
-      [1] getfield #11
-        + Fieldref [es/ricardo/lector/h.a Les/ricardo/lector/CamaraActivity;]
-      [4] aload_1 v1
-      [5] getfield #10
-        + Fieldref [android/hardware/SensorEvent.values [F]
-      [8] iconst_0
-      [9] faload
-      [10] invokestatic #15
-        + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;F)V]
-      [13] aload_0 v0
-      [14] getfield #11
-        + Fieldref [es/ricardo/lector/h.a Les/ricardo/lector/CamaraActivity;]
-      [17] aload_1 v1
-      [18] getfield #10
-        + Fieldref [android/hardware/SensorEvent.values [F]
-      [21] iconst_1
-      [22] faload
-      [23] invokestatic #17
-        + Methodref [es/ricardo/lector/CamaraActivity.b (Les/ricardo/lector/CamaraActivity;F)V]
-      [26] aload_0 v0
-      [27] getfield #11
-        + Fieldref [es/ricardo/lector/h.a Les/ricardo/lector/CamaraActivity;]
-      [30] ldc #1
-        + String [window]
-      [32] invokevirtual #18
-        + Methodref [es/ricardo/lector/CamaraActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [35] checkcast #6
-        + Class [android/view/WindowManager]
-      [38] astore_2 v2
-      [39] aload_2 v2
-      [40] invokeinterface #20
-        + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
-      [45] invokevirtual #13
-        + Methodref [android/view/Display.getRotation ()I]
-      [48] istore_3 v3
-      [49] iload_3 v3
-      [50] tableswitch (3 offsets, default=89) (target=139)
-        1: offset = 26, target = 76
-        2: offset = 89, target = 139
-        3: offset = 58, target = 108
-        default: offset = 89, target = 139
-      [76] aload_0 v0
-      [77] getfield #11
-        + Fieldref [es/ricardo/lector/h.a Les/ricardo/lector/CamaraActivity;]
-      [80] invokestatic #14
-        + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
-      [83] ifnull +14 (target=97)
-      [86] aload_0 v0
-      [87] getfield #11
-        + Fieldref [es/ricardo/lector/h.a Les/ricardo/lector/CamaraActivity;]
-      [90] invokestatic #14
-        + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
-      [93] iconst_0
-      [94] invokevirtual #12
-        + Methodref [android/hardware/Camera.setDisplayOrientation (I)V]
-      [97] aload_0 v0
-      [98] getfield #11
-        + Fieldref [es/ricardo/lector/h.a Les/ricardo/lector/CamaraActivity;]
-      [101] iload_3 v3
-      [102] invokestatic #16
-        + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;I)V]
-      [105] goto +34 (target=139)
-      [108] aload_0 v0
-      [109] getfield #11
-        + Fieldref [es/ricardo/lector/h.a Les/ricardo/lector/CamaraActivity;]
-      [112] invokestatic #14
-        + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
-      [115] ifnull +16 (target=131)
-      [118] aload_0 v0
-      [119] getfield #11
-        + Fieldref [es/ricardo/lector/h.a Les/ricardo/lector/CamaraActivity;]
-      [122] invokestatic #14
-        + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;)Landroid/hardware/Camera;]
-      [125] sipush 180
-      [128] invokevirtual #12
-        + Methodref [android/hardware/Camera.setDisplayOrientation (I)V]
-      [131] aload_0 v0
-      [132] getfield #11
-        + Fieldref [es/ricardo/lector/h.a Les/ricardo/lector/CamaraActivity;]
-      [135] iload_3 v3
-      [136] invokestatic #16
-        + Methodref [es/ricardo/lector/CamaraActivity.a (Les/ricardo/lector/CamaraActivity;I)V]
-      [139] return
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 5):
-        - [76] Var: ...[a:android/view/WindowManager][i], Stack: (empty)
-        - [97] Var: ..., Stack: (empty)
-        - [108] Var: ..., Stack: (empty)
-        - [131] Var: ..., Stack: (empty)
-        - [139] Var: ..., Stack: (empty)
-  + Method:       onAccuracyChanged(Landroid/hardware/Sensor;I)V
-    Access flags: 0x1
-      = public void onAccuracyChanged(android.hardware.Sensor,int)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 1, locals = 3, stack = 0):
-      [0] return
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
-
-Class file attributes (count = 0):
-
-_____________________________________________________________________
-+ Program class: es/ricardo/lector/i
-  Superclass:    java/lang/Object
-  Major version: 0x32
-  Minor version: 0x0
-  Access flags:  0x20
-    = class es.ricardo.lector.i extends java.lang.Object
-
-Interfaces (count = 1):
-  + Class [android/hardware/Camera$AutoFocusCallback]
-
-Constant Pool (count = 37):
-  + Integer [2130968576]
-  + Class [android/hardware/Camera$AutoFocusCallback]
-  + Class [android/media/MediaPlayer]
-  + Class [es/ricardo/lector/i]
-  + Class [java/lang/Object]
-  + Fieldref [es/ricardo/lector/i.a Les/ricardo/lector/CamaraActivity;]
-  + Fieldref [es/ricardo/lector/i.b Z]
-  + Methodref [android/media/MediaPlayer.create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
-  + Methodref [android/media/MediaPlayer.start ()V]
-  + Methodref [es/ricardo/lector/i.<init> (Les/ricardo/lector/CamaraActivity;)V]
-  + Methodref [java/lang/Object.<init> ()V]
-  + NameAndType [<init> ()V]
-  + NameAndType [<init> (Les/ricardo/lector/CamaraActivity;)V]
-  + NameAndType [a Les/ricardo/lector/CamaraActivity;]
-  + NameAndType [b Z]
-  + NameAndType [create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
-  + NameAndType [start ()V]
-  + Utf8 [()V]
-  + Utf8 [(Landroid/content/Context;I)Landroid/media/MediaPlayer;]
-  + Utf8 [(Les/ricardo/lector/CamaraActivity;)V]
-  + Utf8 [(Les/ricardo/lector/CamaraActivity;Les/ricardo/lector/i;)V]
-  + Utf8 [(ZLandroid/hardware/Camera;)V]
-  + Utf8 [<init>]
-  + Utf8 [Code]
-  + Utf8 [Les/ricardo/lector/CamaraActivity;]
-  + Utf8 [StackMapTable]
-  + Utf8 [Z]
-  + Utf8 [a]
-  + Utf8 [android/hardware/Camera$AutoFocusCallback]
-  + Utf8 [android/media/MediaPlayer]
-  + Utf8 [b]
-  + Utf8 [create]
-  + Utf8 [es/ricardo/lector/i]
-  + Utf8 [java/lang/Object]
-  + Utf8 [onAutoFocus]
-  + Utf8 [start]
-
-Fields (count = 2):
-  + Field:        b Z
-    Access flags: 0x2
-      = private boolean b
-  + Field:        a Les/ricardo/lector/CamaraActivity;
-    Access flags: 0x1010
-      = final synthetic es.ricardo.lector.CamaraActivity a
-
-Methods (count = 3):
-  - Method:       <init>(Les/ricardo/lector/CamaraActivity;)V
-    Access flags: 0x2
-      = private i(es.ricardo.lector.CamaraActivity)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 15, locals = 2, stack = 2):
-      [0] aload_0 v0
-      [1] aload_1 v1
-      [2] putfield #6
-        + Fieldref [es/ricardo/lector/i.a Les/ricardo/lector/CamaraActivity;]
-      [5] aload_0 v0
-      [6] invokespecial #11
-        + Methodref [java/lang/Object.<init> ()V]
-      [9] aload_0 v0
-      [10] iconst_0
-      [11] putfield #7
-        + Fieldref [es/ricardo/lector/i.b Z]
-      [14] return
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
-  + Method:       onAutoFocus(ZLandroid/hardware/Camera;)V
-    Access flags: 0x1
-      = public void onAutoFocus(boolean,android.hardware.Camera)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 25, locals = 3, stack = 2):
-      [0] aload_0 v0
-      [1] iload_1 v1
-      [2] putfield #7
-        + Fieldref [es/ricardo/lector/i.b Z]
-      [5] aload_0 v0
-      [6] getfield #7
-        + Fieldref [es/ricardo/lector/i.b Z]
-      [9] ifeq +15 (target=24)
-      [12] aload_0 v0
-      [13] getfield #6
-        + Fieldref [es/ricardo/lector/i.a Les/ricardo/lector/CamaraActivity;]
-      [16] ldc #1
-        + Integer [2130968576]
-      [18] invokestatic #8
-        + Methodref [android/media/MediaPlayer.create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
-      [21] invokevirtual #9
-        + Methodref [android/media/MediaPlayer.start ()V]
-      [24] return
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 1):
-        - [24] Var: ..., Stack: (empty)
-  - Method:       <init>(Les/ricardo/lector/CamaraActivity;Les/ricardo/lector/i;)V
-    Access flags: 0x1000
-      = synthetic i(es.ricardo.lector.CamaraActivity,es.ricardo.lector.i)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 6, locals = 3, stack = 2):
-      [0] aload_0 v0
-      [1] aload_1 v1
-      [2] invokespecial #10
-        + Methodref [es/ricardo/lector/i.<init> (Les/ricardo/lector/CamaraActivity;)V]
-      [5] return
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
 
 Class file attributes (count = 0):
 
@@ -76522,9 +76532,8 @@ Methods (count = 14):
       [127] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 3):
-        - [72] Var: ...[a:android/content/SharedPreferences][a:android/content/SharedPreferences$Editor], Stack: (empty)
-        - [75] Var: ..., Stack: (empty)
+      + Stack map table attribute (count = 2):
+        - [75] Var: ...[a:android/content/SharedPreferences][a:android/content/SharedPreferences$Editor], Stack: (empty)
         - [89] Var: ..., Stack: (empty)
   + Method:       onResume()V
     Access flags: 0x4
@@ -76902,19 +76911,16 @@ Methods (count = 14):
       [546] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 14):
+      + Stack map table attribute (count = 11):
         - [142] Var: ...[a:android/content/SharedPreferences][a:android/content/SharedPreferences$Editor], Stack: (empty)
         - [190] Var: ..., Stack: (empty)
         - [252] Var: ..., Stack: (empty)
         - [343] Var: ...[a:android/view/LayoutInflater][a:android/view/View], Stack: (empty)
-        - [349] Var: ..., Stack: (empty)
         - [352] Var: ..., Stack: (empty)
         - [358] Var: ..., Stack: (empty)
         - [440] Var: ..., Stack: (empty)
         - [473] Var: ..., Stack: (empty)
-        - [486] Var: -2, Stack: (empty)
-        - [489] Var: ..., Stack: (empty)
-        - [519] Var: ..., Stack: (empty)
+        - [489] Var: -2, Stack: (empty)
         - [522] Var: ..., Stack: (empty)
         - [539] Var: ..., Stack: (empty)
   + Method:       a(I)V
@@ -77696,7 +77702,7 @@ Interfaces (count = 2):
   + Class [android/gesture/GestureOverlayView$OnGesturePerformedListener]
   + Class [android/speech/tts/TextToSpeech$OnInitListener]
 
-Constant Pool (count = 668):
+Constant Pool (count = 701):
   + Integer [2130837508]
   + Integer [2130903040]
   + Integer [2130903044]
@@ -77751,7 +77757,11 @@ Constant Pool (count = 668):
   + String [ VII ]
   + String [ VIII ]
   + String [ calle ]
+  + String [ cent?metros]
+  + String [ cm]
   + String [ letra ]
+  + String [ mil?metros]
+  + String [ mm]
   + String [ puerta]
   + String [!]
   + String [0.7]
@@ -77813,6 +77823,7 @@ Constant Pool (count = 668):
   + Class [android/preference/PreferenceManager]
   + Class [android/speech/tts/TextToSpeech]
   + Class [android/speech/tts/TextToSpeech$OnInitListener]
+  + Class [android/util/DisplayMetrics]
   + Class [android/view/Display]
   + Class [android/view/LayoutInflater]
   + Class [android/view/View]
@@ -77841,10 +77852,12 @@ Constant Pool (count = 668):
   + Class [java/util/HashMap]
   + Class [java/util/List]
   + Class [java/util/Locale]
+  + Double [0.015]
   + Double [5.0]
   + Fieldref [android/app/ActivityManager$RunningTaskInfo.topActivity Landroid/content/ComponentName;]
   + Fieldref [android/gesture/Prediction.name Ljava/lang/String;]
   + Fieldref [android/gesture/Prediction.score D]
+  + Fieldref [android/util/DisplayMetrics.density F]
   + Fieldref [es/ricardo/lector/ResultadoActivity.a Landroid/gesture/GestureOverlayView;]
   + Fieldref [es/ricardo/lector/ResultadoActivity.b Landroid/gesture/GestureLibrary;]
   + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
@@ -77865,6 +77878,7 @@ Constant Pool (count = 668):
   + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
   + Methodref [android/content/IntentFilter.<init> (Ljava/lang/String;)V]
   + Methodref [android/content/res/Resources.getColor (I)I]
+  + Methodref [android/content/res/Resources.getDisplayMetrics ()Landroid/util/DisplayMetrics;]
   + Methodref [android/gesture/GestureLibraries.fromRawResource (Landroid/content/Context;I)Landroid/gesture/GestureLibrary;]
   + Methodref [android/gesture/GestureLibrary.load ()Z]
   + Methodref [android/gesture/GestureLibrary.recognize (Landroid/gesture/Gesture;)Ljava/util/ArrayList;]
@@ -77881,6 +77895,7 @@ Constant Pool (count = 668):
   + Methodref [android/media/MediaPlayer.stop ()V]
   + Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
   + Methodref [android/speech/tts/TextToSpeech.<init> (Landroid/content/Context;Landroid/speech/tts/TextToSpeech$OnInitListener;)V]
+  + Methodref [android/speech/tts/TextToSpeech.getLanguage ()Ljava/util/Locale;]
   + Methodref [android/speech/tts/TextToSpeech.setLanguage (Ljava/util/Locale;)I]
   + Methodref [android/speech/tts/TextToSpeech.setOnUtteranceCompletedListener (Landroid/speech/tts/TextToSpeech$OnUtteranceCompletedListener;)I]
   + Methodref [android/speech/tts/TextToSpeech.setSpeechRate (F)I]
@@ -77915,6 +77930,7 @@ Constant Pool (count = 668):
   + Methodref [es/ricardo/lector/ResultadoActivity.c ()V]
   + Methodref [es/ricardo/lector/ResultadoActivity.c (Ljava/lang/String;)Ljava/lang/String;]
   + Methodref [es/ricardo/lector/ResultadoActivity.d ()V]
+  + Methodref [es/ricardo/lector/ResultadoActivity.d (Ljava/lang/String;)V]
   + Methodref [es/ricardo/lector/ResultadoActivity.e ()V]
   + Methodref [es/ricardo/lector/ResultadoActivity.f ()V]
   + Methodref [es/ricardo/lector/ResultadoActivity.findViewById (I)Landroid/view/View;]
@@ -77944,6 +77960,8 @@ Constant Pool (count = 668):
   + Methodref [java/lang/Float.floatValue ()F]
   + Methodref [java/lang/Float.parseFloat (Ljava/lang/String;)F]
   + Methodref [java/lang/Float.valueOf (Ljava/lang/String;)Ljava/lang/Float;]
+  + Methodref [java/lang/Math.floor (D)D]
+  + Methodref [java/lang/Math.round (D)J]
   + Methodref [java/lang/Math.round (F)I]
   + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
   + Methodref [java/lang/String.equalsIgnoreCase (Ljava/lang/String;)Z]
@@ -77990,7 +78008,9 @@ Constant Pool (count = 668):
   + NameAndType [commit ()Z]
   + NameAndType [create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
   + NameAndType [d ()V]
+  + NameAndType [d (Ljava/lang/String;)V]
   + NameAndType [d Landroid/widget/TextView;]
+  + NameAndType [density F]
   + NameAndType [e ()V]
   + NameAndType [e Landroid/speech/tts/TextToSpeech;]
   + NameAndType [edit ()Landroid/content/SharedPreferences$Editor;]
@@ -78002,6 +78022,7 @@ Constant Pool (count = 668):
   + NameAndType [findViewById (I)Landroid/view/View;]
   + NameAndType [finish ()V]
   + NameAndType [floatValue ()F]
+  + NameAndType [floor (D)D]
   + NameAndType [from (Landroid/content/Context;)Landroid/view/LayoutInflater;]
   + NameAndType [fromRawResource (Landroid/content/Context;I)Landroid/gesture/GestureLibrary;]
   + NameAndType [g ()V]
@@ -78013,7 +78034,9 @@ Constant Pool (count = 668):
   + NameAndType [getColor (I)I]
   + NameAndType [getDefaultDisplay ()Landroid/view/Display;]
   + NameAndType [getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
+  + NameAndType [getDisplayMetrics ()Landroid/util/DisplayMetrics;]
   + NameAndType [getInt (Ljava/lang/String;I)I]
+  + NameAndType [getLanguage ()Ljava/util/Locale;]
   + NameAndType [getPackageName ()Ljava/lang/String;]
   + NameAndType [getRectSize (Landroid/graphics/Rect;)V]
   + NameAndType [getResources ()Landroid/content/res/Resources;]
@@ -78048,6 +78071,7 @@ Constant Pool (count = 668):
   + NameAndType [removeOnGesturePerformedListener (Landroid/gesture/GestureOverlayView$OnGesturePerformedListener;)V]
   + NameAndType [replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
   + NameAndType [requestWindowFeature (I)Z]
+  + NameAndType [round (D)J]
   + NameAndType [round (F)I]
   + NameAndType [score D]
   + NameAndType [setContentView (I)V]
@@ -78101,7 +78125,11 @@ Constant Pool (count = 668):
   + Utf8 [ VII ]
   + Utf8 [ VIII ]
   + Utf8 [ calle ]
+  + Utf8 [ cent?metros]
+  + Utf8 [ cm]
   + Utf8 [ letra ]
+  + Utf8 [ mil?metros]
+  + Utf8 [ mm]
   + Utf8 [ puerta]
   + Utf8 [!]
   + Utf8 [()F]
@@ -78109,12 +78137,16 @@ Constant Pool (count = 668):
   + Utf8 [()Landroid/content/Context;]
   + Utf8 [()Landroid/content/SharedPreferences$Editor;]
   + Utf8 [()Landroid/content/res/Resources;]
+  + Utf8 [()Landroid/util/DisplayMetrics;]
   + Utf8 [()Landroid/view/Display;]
   + Utf8 [()Landroid/view/Window;]
   + Utf8 [()Ljava/lang/CharSequence;]
   + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()Ljava/util/Locale;]
   + Utf8 [()V]
   + Utf8 [()Z]
+  + Utf8 [(D)D]
+  + Utf8 [(D)J]
   + Utf8 [(F)I]
   + Utf8 [(F)V]
   + Utf8 [(I)I]
@@ -78187,6 +78219,7 @@ Constant Pool (count = 668):
   + Utf8 [Code]
   + Utf8 [D]
   + Utf8 [ESP]
+  + Utf8 [F]
   + Utf8 [I]
   + Utf8 [LTR ]
   + Utf8 [Landroid/content/BroadcastReceiver;]
@@ -78227,6 +78260,7 @@ Constant Pool (count = 668):
   + Utf8 [android/preference/PreferenceManager]
   + Utf8 [android/speech/tts/TextToSpeech]
   + Utf8 [android/speech/tts/TextToSpeech$OnInitListener]
+  + Utf8 [android/util/DisplayMetrics]
   + Utf8 [android/view/Display]
   + Utf8 [android/view/LayoutInflater]
   + Utf8 [android/view/View]
@@ -78245,6 +78279,7 @@ Constant Pool (count = 668):
   + Utf8 [create]
   + Utf8 [cuarto]
   + Utf8 [d]
+  + Utf8 [density]
   + Utf8 [d?cimo]
   + Utf8 [e]
   + Utf8 [edit]
@@ -78263,6 +78298,7 @@ Constant Pool (count = 668):
   + Utf8 [findViewById]
   + Utf8 [finish]
   + Utf8 [floatValue]
+  + Utf8 [floor]
   + Utf8 [from]
   + Utf8 [fromRawResource]
   + Utf8 [g]
@@ -78273,7 +78309,9 @@ Constant Pool (count = 668):
   + Utf8 [getColor]
   + Utf8 [getDefaultDisplay]
   + Utf8 [getDefaultSharedPreferences]
+  + Utf8 [getDisplayMetrics]
   + Utf8 [getInt]
+  + Utf8 [getLanguage]
   + Utf8 [getPackageName]
   + Utf8 [getRectSize]
   + Utf8 [getResources]
@@ -78390,31 +78428,31 @@ Fields (count = 8):
     Access flags: 0x12
       = private final android.content.BroadcastReceiver h
 
-Methods (count = 22):
+Methods (count = 23):
   - Method:       <init>()V
     Access flags: 0x1
       = public ResultadoActivity()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 27, locals = 1, stack = 4):
       [0] aload_0 v0
-      [1] invokespecial #158
+      [1] invokespecial #166
         + Methodref [android/app/Activity.<init> ()V]
       [4] aload_0 v0
       [5] aconst_null
-      [6] putfield #155
+      [6] putfield #163
         + Fieldref [es/ricardo/lector/ResultadoActivity.f Les/ricardo/lector/v;]
       [9] aload_0 v0
       [10] iconst_0
-      [11] putfield #156
+      [11] putfield #164
         + Fieldref [es/ricardo/lector/ResultadoActivity.g Z]
       [14] aload_0 v0
-      [15] new #130
+      [15] new #135
         + Class [es/ricardo/lector/q]
       [18] dup
       [19] aload_0 v0
-      [20] invokespecial #237
+      [20] invokespecial #248
         + Methodref [es/ricardo/lector/q.<init> (Les/ricardo/lector/ResultadoActivity;)V]
-      [23] putfield #157
+      [23] putfield #165
         + Fieldref [es/ricardo/lector/ResultadoActivity.h Landroid/content/BroadcastReceiver;]
       [26] return
       Code attribute exceptions (count = 0):
@@ -78426,27 +78464,27 @@ Methods (count = 22):
     + Code attribute instructions (code length = 34, locals = 2, stack = 5):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #159
+      [2] invokespecial #167
         + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
       [6] aload_0 v0
       [7] bipush 7
-      [9] invokevirtual #232
+      [9] invokevirtual #243
         + Methodref [es/ricardo/lector/ResultadoActivity.requestWindowFeature (I)Z]
-      [12] putfield #156
+      [12] putfield #164
         + Fieldref [es/ricardo/lector/ResultadoActivity.g Z]
       [15] aload_0 v0
       [16] aload_0 v0
-      [17] getfield #157
+      [17] getfield #165
         + Fieldref [es/ricardo/lector/ResultadoActivity.h Landroid/content/BroadcastReceiver;]
-      [20] new #103
+      [20] new #107
         + Class [android/content/IntentFilter]
       [23] dup
-      [24] ldc #62
+      [24] ldc #66
         + String [3]
-      [26] invokespecial #168
+      [26] invokespecial #176
         + Methodref [android/content/IntentFilter.<init> (Ljava/lang/String;)V]
-      [29] invokevirtual #231
+      [29] invokevirtual #242
         + Methodref [es/ricardo/lector/ResultadoActivity.registerReceiver (Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;]
       [32] pop
       [33] return
@@ -78456,127 +78494,127 @@ Methods (count = 22):
     Access flags: 0x4
       = protected void onResume()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 391, locals = 8, stack = 6):
+    + Code attribute instructions (code length = 411, locals = 9, stack = 6):
       [0] aload_0 v0
-      [1] invokespecial #162
+      [1] invokespecial #170
         + Methodref [android/app/Activity.onResume ()V]
       [4] aload_0 v0
-      [5] invokestatic #184
+      [5] invokestatic #193
         + Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
       [8] astore_1 v1
       [9] aload_1 v1
       [10] aload_0 v0
       [11] ldc #12
         + Integer [2131165188]
-      [13] invokevirtual #227
+      [13] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [16] iconst_0
-      [17] invokeinterface #260
+      [17] invokeinterface #273
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [22] ifne +359 (target=381)
+      [22] ifne +379 (target=401)
       [25] aload_1 v1
       [26] aload_0 v0
       [27] ldc #28
         + Integer [2131165219]
-      [29] invokevirtual #227
+      [29] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [32] iconst_0
-      [33] invokeinterface #260
+      [33] invokeinterface #273
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [38] ifne +343 (target=381)
+      [38] ifne +363 (target=401)
       [41] aload_1 v1
       [42] aload_0 v0
       [43] ldc #29
         + Integer [2131165222]
-      [45] invokevirtual #227
+      [45] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [48] iconst_0
-      [49] invokeinterface #260
+      [49] invokeinterface #273
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [54] ifne +327 (target=381)
+      [54] ifne +347 (target=401)
       [57] aload_0 v0
       [58] ldc #3
         + Integer [2130903044]
-      [60] invokevirtual #233
+      [60] invokevirtual #244
         + Methodref [es/ricardo/lector/ResultadoActivity.setContentView (I)V]
       [63] aload_0 v0
-      [64] getfield #156
+      [64] getfield #164
         + Fieldref [es/ricardo/lector/ResultadoActivity.g Z]
       [67] ifeq +14 (target=81)
       [70] aload_0 v0
-      [71] invokevirtual #229
+      [71] invokevirtual #240
         + Methodref [es/ricardo/lector/ResultadoActivity.getWindow ()Landroid/view/Window;]
       [74] bipush 7
       [76] ldc #4
         + Integer [2130903045]
-      [78] invokevirtual #197
+      [78] invokevirtual #207
         + Methodref [android/view/Window.setFeatureInt (II)V]
       [81] aload_1 v1
-      [82] invokeinterface #259
+      [82] invokeinterface #272
         + InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
       [87] astore_2 v2
       [88] aload_2 v2
       [89] aload_0 v0
       [90] ldc #27
         + Integer [2131165215]
-      [92] invokevirtual #227
+      [92] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [95] iconst_3
-      [96] invokeinterface #265
+      [96] invokeinterface #278
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
       [101] pop
       [102] aload_2 v2
-      [103] invokeinterface #263
+      [103] invokeinterface #276
         + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
       [108] pop
       [109] aload_0 v0
-      [110] getfield #154
+      [110] getfield #162
         + Fieldref [es/ricardo/lector/ResultadoActivity.e Landroid/speech/tts/TextToSpeech;]
       [113] ifnonnull +16 (target=129)
       [116] aload_0 v0
-      [117] new #115
+      [117] new #119
         + Class [android/speech/tts/TextToSpeech]
       [120] dup
       [121] aload_0 v0
       [122] aload_0 v0
-      [123] invokespecial #185
+      [123] invokespecial #194
         + Methodref [android/speech/tts/TextToSpeech.<init> (Landroid/content/Context;Landroid/speech/tts/TextToSpeech$OnInitListener;)V]
-      [126] putfield #154
+      [126] putfield #162
         + Fieldref [es/ricardo/lector/ResultadoActivity.e Landroid/speech/tts/TextToSpeech;]
       [129] aload_0 v0
-      [130] getfield #154
+      [130] getfield #162
         + Fieldref [es/ricardo/lector/ResultadoActivity.e Landroid/speech/tts/TextToSpeech;]
-      [133] ldc #58
+      [133] ldc #62
         + String [0.7]
-      [135] invokestatic #248
+      [135] invokestatic #259
         + Methodref [java/lang/Float.valueOf (Ljava/lang/String;)Ljava/lang/Float;]
-      [138] invokevirtual #246
+      [138] invokevirtual #257
         + Methodref [java/lang/Float.floatValue ()F]
-      [141] invokevirtual #188
+      [141] invokevirtual #198
         + Methodref [android/speech/tts/TextToSpeech.setSpeechRate (F)I]
       [144] pop
       [145] aload_1 v1
       [146] aload_0 v0
       [147] ldc #13
         + Integer [2131165189]
-      [149] invokevirtual #227
+      [149] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [152] aconst_null
-      [153] invokeinterface #262
+      [153] invokeinterface #275
         + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [158] astore_3 v3
       [159] aload_0 v0
       [160] aload_0 v0
       [161] ldc #30
         + Integer [2131361798]
-      [163] invokevirtual #222
+      [163] invokevirtual #233
         + Methodref [es/ricardo/lector/ResultadoActivity.findViewById (I)Landroid/view/View;]
-      [166] checkcast #127
+      [166] checkcast #132
         + Class [android/widget/TextView]
-      [169] putfield #153
+      [169] putfield #161
         + Fieldref [es/ricardo/lector/ResultadoActivity.d Landroid/widget/TextView;]
       [172] aload_0 v0
-      [173] invokestatic #193
+      [173] invokestatic #203
         + Methodref [android/view/LayoutInflater.from (Landroid/content/Context;)Landroid/view/LayoutInflater;]
       [176] astore v4
       [178] aload_0 v0
@@ -78584,202 +78622,215 @@ Methods (count = 22):
       [181] ldc #2
         + Integer [2130903040]
       [183] aconst_null
-      [184] invokevirtual #194
+      [184] invokevirtual #204
         + Methodref [android/view/LayoutInflater.inflate (ILandroid/view/ViewGroup;)Landroid/view/View;]
-      [187] checkcast #109
+      [187] checkcast #113
         + Class [android/gesture/GestureOverlayView]
-      [190] putfield #150
+      [190] putfield #158
         + Fieldref [es/ricardo/lector/ResultadoActivity.a Landroid/gesture/GestureOverlayView;]
       [193] aload_0 v0
       [194] aload_0 v0
       [195] ldc #5
         + Integer [2130968584]
-      [197] invokestatic #170
+      [197] invokestatic #179
         + Methodref [android/gesture/GestureLibraries.fromRawResource (Landroid/content/Context;I)Landroid/gesture/GestureLibrary;]
-      [200] putfield #151
+      [200] putfield #159
         + Fieldref [es/ricardo/lector/ResultadoActivity.b Landroid/gesture/GestureLibrary;]
       [203] aload_0 v0
       [204] aload_0 v0
-      [205] getfield #150
+      [205] getfield #158
         + Fieldref [es/ricardo/lector/ResultadoActivity.a Landroid/gesture/GestureOverlayView;]
-      [208] new #120
+      [208] new #125
         + Class [android/view/ViewGroup$LayoutParams]
       [211] dup
       [212] iconst_m1
       [213] iconst_m1
-      [214] invokespecial #196
+      [214] invokespecial #206
         + Methodref [android/view/ViewGroup$LayoutParams.<init> (II)V]
-      [217] invokevirtual #214
+      [217] invokevirtual #224
         + Methodref [es/ricardo/lector/ResultadoActivity.addContentView (Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V]
       [220] aload_0 v0
-      [221] getfield #151
+      [221] getfield #159
         + Fieldref [es/ricardo/lector/ResultadoActivity.b Landroid/gesture/GestureLibrary;]
-      [224] invokevirtual #171
+      [224] invokevirtual #180
         + Methodref [android/gesture/GestureLibrary.load ()Z]
       [227] ifne +7 (target=234)
       [230] aload_0 v0
-      [231] invokevirtual #223
+      [231] invokevirtual #234
         + Methodref [es/ricardo/lector/ResultadoActivity.finish ()V]
       [234] aload_3 v3
-      [235] ifnonnull +120 (target=355)
+      [235] ifnonnull +140 (target=375)
       [238] aload_0 v0
-      [239] ldc #94
+      [239] ldc #98
         + String [window]
-      [241] invokevirtual #228
+      [241] invokevirtual #239
         + Methodref [es/ricardo/lector/ResultadoActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [244] checkcast #122
+      [244] checkcast #127
         + Class [android/view/WindowManager]
       [247] astore v5
-      [249] new #112
+      [249] new #116
         + Class [android/graphics/Rect]
       [252] dup
-      [253] invokespecial #175
+      [253] invokespecial #184
         + Methodref [android/graphics/Rect.<init> ()V]
       [256] astore v6
       [258] aload v5
-      [260] invokeinterface #267
+      [260] invokeinterface #280
         + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
       [265] aload v6
-      [267] invokevirtual #192
+      [267] invokevirtual #202
         + Methodref [android/view/Display.getRectSize (Landroid/graphics/Rect;)V]
       [270] aload_0 v0
-      [271] ldc #31
+      [271] invokevirtual #237
+        + Methodref [es/ricardo/lector/ResultadoActivity.getResources ()Landroid/content/res/Resources;]
+      [274] invokevirtual #178
+        + Methodref [android/content/res/Resources.getDisplayMetrics ()Landroid/util/DisplayMetrics;]
+      [277] astore v7
+      [279] aload_0 v0
+      [280] ldc #31
         + Integer [2131361799]
-      [273] invokevirtual #222
+      [282] invokevirtual #233
         + Methodref [es/ricardo/lector/ResultadoActivity.findViewById (I)Landroid/view/View;]
-      [276] checkcast #126
+      [285] checkcast #131
         + Class [android/widget/ProgressBar]
-      [279] astore v7
-      [281] aload v7
-      [283] aload v6
-      [285] invokevirtual #177
+      [288] astore v8
+      [290] aload v8
+      [292] ldc2_w #150
+        + Double [0.015]
+      [295] aload v6
+      [297] invokevirtual #186
         + Methodref [android/graphics/Rect.width ()I]
-      [288] bipush 100
-      [290] idiv
-      [291] i2f
-      [292] invokestatic #249
-        + Methodref [java/lang/Math.round (F)I]
-      [295] i2f
-      [296] invokevirtual #203
+      [300] i2d
+      [301] dmul
+      [302] aload v7
+      [304] getfield #157
+        + Fieldref [android/util/DisplayMetrics.density F]
+      [307] f2d
+      [308] ddiv
+      [309] invokestatic #260
+        + Methodref [java/lang/Math.floor (D)D]
+      [312] invokestatic #261
+        + Methodref [java/lang/Math.round (D)J]
+      [315] l2f
+      [316] invokevirtual #213
         + Methodref [android/widget/ProgressBar.setScaleX (F)V]
-      [299] aload v7
-      [301] aload v7
-      [303] invokevirtual #202
+      [319] aload v8
+      [321] aload v8
+      [323] invokevirtual #212
         + Methodref [android/widget/ProgressBar.getScaleX ()F]
-      [306] invokevirtual #204
+      [326] invokevirtual #214
         + Methodref [android/widget/ProgressBar.setScaleY (F)V]
-      [309] aload v7
-      [311] iconst_0
-      [312] invokevirtual #205
+      [329] aload v8
+      [331] iconst_0
+      [332] invokevirtual #215
         + Methodref [android/widget/ProgressBar.setVisibility (I)V]
-      [315] aload_0 v0
-      [316] invokespecial #215
+      [335] aload_0 v0
+      [336] invokespecial #225
         + Methodref [es/ricardo/lector/ResultadoActivity.b ()V]
-      [319] aload_0 v0
-      [320] getfield #153
+      [339] aload_0 v0
+      [340] getfield #161
         + Fieldref [es/ricardo/lector/ResultadoActivity.d Landroid/widget/TextView;]
-      [323] ldc #11
+      [343] ldc #11
         + Integer [2131165187]
-      [325] invokevirtual #207
+      [345] invokevirtual #217
         + Methodref [android/widget/TextView.setText (I)V]
-      [328] aload_0 v0
-      [329] new #135
+      [348] aload_0 v0
+      [349] new #140
         + Class [es/ricardo/lector/v]
-      [332] dup
-      [333] aload_0 v0
-      [334] invokespecial #242
+      [352] dup
+      [353] aload_0 v0
+      [354] invokespecial #253
         + Methodref [es/ricardo/lector/v.<init> (Les/ricardo/lector/ResultadoActivity;)V]
-      [337] putfield #155
+      [357] putfield #163
         + Fieldref [es/ricardo/lector/ResultadoActivity.f Les/ricardo/lector/v;]
-      [340] aload_0 v0
-      [341] getfield #155
+      [360] aload_0 v0
+      [361] getfield #163
         + Fieldref [es/ricardo/lector/ResultadoActivity.f Les/ricardo/lector/v;]
-      [344] iconst_0
-      [345] anewarray #140
+      [364] iconst_0
+      [365] anewarray #145
         + Class [java/lang/String]
-      [348] invokevirtual #244
+      [368] invokevirtual #255
         + Methodref [es/ricardo/lector/v.execute ([Ljava/lang/Object;)Landroid/os/AsyncTask;]
-      [351] pop
-      [352] goto +38 (target=390)
-      [355] aload_0 v0
-      [356] ldc #31
+      [371] pop
+      [372] goto +38 (target=410)
+      [375] aload_0 v0
+      [376] ldc #31
         + Integer [2131361799]
-      [358] invokevirtual #222
+      [378] invokevirtual #233
         + Methodref [es/ricardo/lector/ResultadoActivity.findViewById (I)Landroid/view/View;]
-      [361] bipush 8
-      [363] invokevirtual #195
+      [381] bipush 8
+      [383] invokevirtual #205
         + Methodref [android/view/View.setVisibility (I)V]
-      [366] aload_0 v0
-      [367] invokespecial #215
-        + Methodref [es/ricardo/lector/ResultadoActivity.b ()V]
-      [370] aload_0 v0
-      [371] invokespecial #224
-        + Methodref [es/ricardo/lector/ResultadoActivity.g ()V]
-      [374] aload_0 v0
-      [375] invokespecial #230
-        + Methodref [es/ricardo/lector/ResultadoActivity.h ()V]
-      [378] goto +12 (target=390)
-      [381] aload_0 v0
-      [382] iconst_0
-      [383] invokevirtual #234
-        + Methodref [es/ricardo/lector/ResultadoActivity.setResult (I)V]
       [386] aload_0 v0
-      [387] invokevirtual #223
+      [387] invokespecial #225
+        + Methodref [es/ricardo/lector/ResultadoActivity.b ()V]
+      [390] aload_0 v0
+      [391] invokespecial #235
+        + Methodref [es/ricardo/lector/ResultadoActivity.g ()V]
+      [394] aload_0 v0
+      [395] invokespecial #241
+        + Methodref [es/ricardo/lector/ResultadoActivity.h ()V]
+      [398] goto +12 (target=410)
+      [401] aload_0 v0
+      [402] iconst_0
+      [403] invokevirtual #245
+        + Methodref [es/ricardo/lector/ResultadoActivity.setResult (I)V]
+      [406] aload_0 v0
+      [407] invokevirtual #234
         + Methodref [es/ricardo/lector/ResultadoActivity.finish ()V]
-      [390] return
+      [410] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 7):
+      + Stack map table attribute (count = 6):
         - [81] Var: ...[a:android/content/SharedPreferences], Stack: (empty)
         - [129] Var: ...[a:android/content/SharedPreferences$Editor], Stack: (empty)
         - [234] Var: ...[a:java/lang/String][a:android/view/LayoutInflater], Stack: (empty)
-        - [355] Var: ..., Stack: (empty)
-        - [378] Var: -3, Stack: (empty)
-        - [381] Var: ..., Stack: (empty)
-        - [390] Var: ..., Stack: (empty)
+        - [375] Var: ..., Stack: (empty)
+        - [401] Var: -3, Stack: (empty)
+        - [410] Var: ..., Stack: (empty)
   + Method:       a(Ljava/lang/String;II)V
     Access flags: 0x4
       = protected void a(java.lang.String,int,int)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 215, locals = 7, stack = 3):
+    + Code attribute instructions (code length = 156, locals = 7, stack = 3):
       [0] aload_0 v0
       [1] ldc #31
         + Integer [2131361799]
-      [3] invokevirtual #222
+      [3] invokevirtual #233
         + Methodref [es/ricardo/lector/ResultadoActivity.findViewById (I)Landroid/view/View;]
       [6] bipush 8
-      [8] invokevirtual #195
+      [8] invokevirtual #205
         + Methodref [android/view/View.setVisibility (I)V]
       [11] aload_0 v0
-      [12] invokestatic #184
+      [12] invokestatic #193
         + Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
       [15] astore v4
       [17] aload v4
       [19] aload_0 v0
       [20] ldc #13
         + Integer [2131165189]
-      [22] invokevirtual #227
+      [22] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [25] aconst_null
-      [26] invokeinterface #262
+      [26] invokeinterface #275
         + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [31] astore v5
       [33] iload_3 v3
-      [34] ifne +130 (target=164)
+      [34] ifne +71 (target=105)
       [37] aload v5
       [39] ifnonnull +54 (target=93)
       [42] aload v4
-      [44] invokeinterface #259
+      [44] invokeinterface #272
         + InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
       [49] astore v6
       [51] aload v6
       [53] aload_0 v0
       [54] ldc #13
         + Integer [2131165189]
-      [56] invokevirtual #227
+      [56] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [59] aload_1 v1
-      [60] invokeinterface #266
+      [60] invokeinterface #279
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putString (Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;]
       [65] pop
       [66] iload_2 v2
@@ -78788,135 +78839,90 @@ Methods (count = 22):
       [72] aload_0 v0
       [73] ldc #14
         + Integer [2131165190]
-      [75] invokevirtual #227
+      [75] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [78] iload_2 v2
-      [79] invokeinterface #265
+      [79] invokeinterface #278
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
       [84] pop
       [85] aload v6
-      [87] invokeinterface #263
+      [87] invokeinterface #276
         + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
       [92] pop
       [93] aload_0 v0
-      [94] invokespecial #230
+      [94] invokespecial #241
         + Methodref [es/ricardo/lector/ResultadoActivity.h ()V]
-      [97] aload_1 v1
-      [98] ifnull +15 (target=113)
-      [101] ldc #33
-        + String []
-      [103] aload_1 v1
-      [104] invokevirtual #253
-        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
-      [107] invokevirtual #250
-        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [110] ifeq +14 (target=124)
-      [113] aload_0 v0
-      [114] ldc #19
-        + Integer [2131165198]
-      [116] ldc #9
-        + Integer [2130968594]
-      [118] invokespecial #212
-        + Methodref [es/ricardo/lector/ResultadoActivity.a (II)V]
-      [121] goto +93 (target=214)
-      [124] aload_0 v0
-      [125] ldc #23
-        + Integer [2131165202]
-      [127] invokevirtual #227
-        + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
-      [130] aload_1 v1
-      [131] invokevirtual #253
-        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
-      [134] invokevirtual #250
-        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [137] ifeq +14 (target=151)
-      [140] aload_0 v0
-      [141] ldc #23
-        + Integer [2131165202]
-      [143] ldc #6
-        + Integer [2130968585]
-      [145] invokespecial #212
-        + Methodref [es/ricardo/lector/ResultadoActivity.a (II)V]
-      [148] goto +66 (target=214)
-      [151] aload_0 v0
-      [152] aload_1 v1
-      [153] invokespecial #213
-        + Methodref [es/ricardo/lector/ResultadoActivity.a (Ljava/lang/String;)V]
-      [156] aload_0 v0
-      [157] aload_1 v1
-      [158] invokespecial #216
-        + Methodref [es/ricardo/lector/ResultadoActivity.b (Ljava/lang/String;)V]
-      [161] goto +53 (target=214)
-      [164] aload_0 v0
-      [165] getfield #152
+      [97] aload_0 v0
+      [98] aload_1 v1
+      [99] invokespecial #230
+        + Methodref [es/ricardo/lector/ResultadoActivity.d (Ljava/lang/String;)V]
+      [102] goto +53 (target=155)
+      [105] aload_0 v0
+      [106] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [168] ifnull +20 (target=188)
-      [171] aload_0 v0
-      [172] getfield #152
+      [109] ifnull +20 (target=129)
+      [112] aload_0 v0
+      [113] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [175] invokevirtual #179
+      [116] invokevirtual #188
         + Methodref [android/media/MediaPlayer.isPlaying ()Z]
-      [178] ifeq +10 (target=188)
-      [181] aload_0 v0
-      [182] getfield #152
+      [119] ifeq +10 (target=129)
+      [122] aload_0 v0
+      [123] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [185] invokevirtual #183
+      [126] invokevirtual #192
         + Methodref [android/media/MediaPlayer.stop ()V]
-      [188] aload_0 v0
-      [189] aload_0 v0
-      [190] iload_3 v3
-      [191] invokestatic #178
+      [129] aload_0 v0
+      [130] aload_0 v0
+      [131] iload_3 v3
+      [132] invokestatic #187
         + Methodref [android/media/MediaPlayer.create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
-      [194] putfield #152
+      [135] putfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [197] aload_0 v0
-      [198] getfield #152
+      [138] aload_0 v0
+      [139] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [201] invokevirtual #182
+      [142] invokevirtual #191
         + Methodref [android/media/MediaPlayer.start ()V]
-      [204] aload_0 v0
-      [205] aload_0 v0
-      [206] ldc #20
+      [145] aload_0 v0
+      [146] aload_0 v0
+      [147] ldc #20
         + Integer [2131165199]
-      [208] invokevirtual #227
+      [149] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
-      [211] invokespecial #213
+      [152] invokespecial #223
         + Methodref [es/ricardo/lector/ResultadoActivity.a (Ljava/lang/String;)V]
-      [214] return
+      [155] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 9):
+      + Stack map table attribute (count = 5):
         - [85] Var: ...[a:android/content/SharedPreferences][a:java/lang/String][a:android/content/SharedPreferences$Editor], Stack: (empty)
         - [93] Var: -1, Stack: (empty)
-        - [113] Var: ..., Stack: (empty)
-        - [124] Var: ..., Stack: (empty)
-        - [151] Var: ..., Stack: (empty)
-        - [161] Var: ..., Stack: (empty)
-        - [164] Var: ..., Stack: (empty)
-        - [188] Var: ..., Stack: (empty)
-        - [214] Var: ..., Stack: (empty)
+        - [105] Var: ..., Stack: (empty)
+        - [129] Var: ..., Stack: (empty)
+        - [155] Var: ..., Stack: (empty)
   + Method:       a(Ljava/lang/String;)V
     Access flags: 0x2
       = private void a(java.lang.String)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 25, locals = 2, stack = 3):
       [0] aload_0 v0
-      [1] getfield #153
+      [1] getfield #161
         + Fieldref [es/ricardo/lector/ResultadoActivity.d Landroid/widget/TextView;]
       [4] aload_0 v0
-      [5] invokevirtual #226
+      [5] invokevirtual #237
         + Methodref [es/ricardo/lector/ResultadoActivity.getResources ()Landroid/content/res/Resources;]
       [8] ldc #10
         + Integer [2131034112]
-      [10] invokevirtual #169
+      [10] invokevirtual #177
         + Methodref [android/content/res/Resources.getColor (I)I]
-      [13] invokevirtual #209
+      [13] invokevirtual #219
         + Methodref [android/widget/TextView.setTextColor (I)V]
       [16] aload_0 v0
-      [17] getfield #153
+      [17] getfield #161
         + Fieldref [es/ricardo/lector/ResultadoActivity.d Landroid/widget/TextView;]
       [20] aload_1 v1
-      [21] invokevirtual #208
+      [21] invokevirtual #218
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [24] return
       Code attribute exceptions (count = 0):
@@ -78925,118 +78931,184 @@ Methods (count = 22):
     Access flags: 0x1
       = public void onInit(int)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 42, locals = 3, stack = 5):
+    + Code attribute instructions (code length = 140, locals = 4, stack = 5):
       [0] iload_1 v1
-      [1] ifne +40 (target=41)
+      [1] ifne +138 (target=139)
       [4] aload_0 v0
-      [5] getfield #154
+      [5] getfield #162
         + Fieldref [es/ricardo/lector/ResultadoActivity.e Landroid/speech/tts/TextToSpeech;]
-      [8] new #144
+      [8] new #149
         + Class [java/util/Locale]
       [11] dup
-      [12] ldc #90
+      [12] ldc #94
         + String [spa]
-      [14] ldc #72
+      [14] ldc #76
         + String [ESP]
-      [16] invokespecial #258
+      [16] invokespecial #271
         + Methodref [java/util/Locale.<init> (Ljava/lang/String;Ljava/lang/String;)V]
-      [19] invokevirtual #186
+      [19] invokevirtual #196
         + Methodref [android/speech/tts/TextToSpeech.setLanguage (Ljava/util/Locale;)I]
       [22] pop
-      [23] new #131
+      [23] new #136
         + Class [es/ricardo/lector/r]
       [26] dup
       [27] aload_0 v0
-      [28] invokespecial #238
+      [28] invokespecial #249
         + Methodref [es/ricardo/lector/r.<init> (Les/ricardo/lector/ResultadoActivity;)V]
       [31] astore_2 v2
       [32] aload_0 v0
-      [33] getfield #154
+      [33] getfield #162
         + Fieldref [es/ricardo/lector/ResultadoActivity.e Landroid/speech/tts/TextToSpeech;]
       [36] aload_2 v2
-      [37] invokevirtual #187
+      [37] invokevirtual #197
         + Methodref [android/speech/tts/TextToSpeech.setOnUtteranceCompletedListener (Landroid/speech/tts/TextToSpeech$OnUtteranceCompletedListener;)I]
       [40] pop
-      [41] return
+      [41] aload_0 v0
+      [42] getfield #161
+        + Fieldref [es/ricardo/lector/ResultadoActivity.d Landroid/widget/TextView;]
+      [45] invokevirtual #216
+        + Methodref [android/widget/TextView.getText ()Ljava/lang/CharSequence;]
+      [48] invokeinterface #281
+        + InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
+      [53] astore_3 v3
+      [54] aload_3 v3
+      [55] ifnull +84 (target=139)
+      [58] ldc #33
+        + String []
+      [60] aload_3 v3
+      [61] invokevirtual #266
+        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
+      [64] invokevirtual #263
+        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [67] ifne +72 (target=139)
+      [70] aload_0 v0
+      [71] ldc #19
+        + Integer [2131165198]
+      [73] invokevirtual #238
+        + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
+      [76] aload_3 v3
+      [77] invokevirtual #266
+        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
+      [80] invokevirtual #263
+        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [83] ifne +56 (target=139)
+      [86] aload_0 v0
+      [87] ldc #23
+        + Integer [2131165202]
+      [89] invokevirtual #238
+        + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
+      [92] aload_3 v3
+      [93] invokevirtual #266
+        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
+      [96] invokevirtual #263
+        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [99] ifne +40 (target=139)
+      [102] aload_0 v0
+      [103] ldc #11
+        + Integer [2131165187]
+      [105] invokevirtual #238
+        + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
+      [108] aload_3 v3
+      [109] invokevirtual #266
+        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
+      [112] invokevirtual #263
+        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [115] ifne +24 (target=139)
+      [118] aload_0 v0
+      [119] ldc #20
+        + Integer [2131165199]
+      [121] invokevirtual #238
+        + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
+      [124] aload_3 v3
+      [125] invokevirtual #266
+        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
+      [128] invokevirtual #263
+        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [131] ifne +8 (target=139)
+      [134] aload_0 v0
+      [135] aload_3 v3
+      [136] invokespecial #226
+        + Methodref [es/ricardo/lector/ResultadoActivity.b (Ljava/lang/String;)V]
+      [139] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 1):
-        - [41] Var: ..., Stack: (empty)
+        - [139] Var: ..., Stack: (empty)
   + Method:       b()V
     Access flags: 0x2
       = private void b()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 106, locals = 3, stack = 4):
       [0] aload_0 v0
-      [1] ldc #94
+      [1] ldc #98
         + String [window]
-      [3] invokevirtual #228
+      [3] invokevirtual #239
         + Methodref [es/ricardo/lector/ResultadoActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [6] checkcast #122
+      [6] checkcast #127
         + Class [android/view/WindowManager]
       [9] astore_1 v1
-      [10] new #112
+      [10] new #116
         + Class [android/graphics/Rect]
       [13] dup
-      [14] invokespecial #175
+      [14] invokespecial #184
         + Methodref [android/graphics/Rect.<init> ()V]
       [17] astore_2 v2
       [18] aload_1 v1
-      [19] invokeinterface #267
+      [19] invokeinterface #280
         + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
       [24] aload_2 v2
-      [25] invokevirtual #192
+      [25] invokevirtual #202
         + Methodref [android/view/Display.getRectSize (Landroid/graphics/Rect;)V]
       [28] aload_2 v2
-      [29] invokevirtual #177
+      [29] invokevirtual #186
         + Methodref [android/graphics/Rect.width ()I]
       [32] sipush 600
       [35] ificmpge +23 (target=58)
       [38] aload_0 v0
-      [39] getfield #153
+      [39] getfield #161
         + Fieldref [es/ricardo/lector/ResultadoActivity.d Landroid/widget/TextView;]
       [42] iconst_2
       [43] aload_0 v0
       [44] ldc #24
         + Integer [2131165210]
-      [46] invokevirtual #227
+      [46] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
-      [49] invokestatic #247
+      [49] invokestatic #258
         + Methodref [java/lang/Float.parseFloat (Ljava/lang/String;)F]
-      [52] invokevirtual #210
+      [52] invokevirtual #220
         + Methodref [android/widget/TextView.setTextSize (IF)V]
       [55] goto +50 (target=105)
       [58] aload_2 v2
-      [59] invokevirtual #177
+      [59] invokevirtual #186
         + Methodref [android/graphics/Rect.width ()I]
       [62] sipush 800
       [65] ificmpge +23 (target=88)
       [68] aload_0 v0
-      [69] getfield #153
+      [69] getfield #161
         + Fieldref [es/ricardo/lector/ResultadoActivity.d Landroid/widget/TextView;]
       [72] iconst_2
       [73] aload_0 v0
       [74] ldc #25
         + Integer [2131165211]
-      [76] invokevirtual #227
+      [76] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
-      [79] invokestatic #247
+      [79] invokestatic #258
         + Methodref [java/lang/Float.parseFloat (Ljava/lang/String;)F]
-      [82] invokevirtual #210
+      [82] invokevirtual #220
         + Methodref [android/widget/TextView.setTextSize (IF)V]
       [85] goto +20 (target=105)
       [88] aload_0 v0
-      [89] getfield #153
+      [89] getfield #161
         + Fieldref [es/ricardo/lector/ResultadoActivity.d Landroid/widget/TextView;]
       [92] iconst_2
       [93] aload_0 v0
       [94] ldc #26
         + Integer [2131165212]
-      [96] invokevirtual #227
+      [96] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
-      [99] invokestatic #247
+      [99] invokestatic #258
         + Methodref [java/lang/Float.parseFloat (Ljava/lang/String;)F]
-      [102] invokevirtual #210
+      [102] invokevirtual #220
         + Methodref [android/widget/TextView.setTextSize (IF)V]
       [105] return
       Code attribute exceptions (count = 0):
@@ -79051,91 +79123,91 @@ Methods (count = 22):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 130, locals = 3, stack = 3):
       [0] aload_0 v0
-      [1] invokespecial #161
+      [1] invokespecial #169
         + Methodref [android/app/Activity.onPause ()V]
       [4] aload_0 v0
-      [5] getfield #154
+      [5] getfield #162
         + Fieldref [es/ricardo/lector/ResultadoActivity.e Landroid/speech/tts/TextToSpeech;]
       [8] ifnull +18 (target=26)
       [11] aload_0 v0
-      [12] getfield #154
+      [12] getfield #162
         + Fieldref [es/ricardo/lector/ResultadoActivity.e Landroid/speech/tts/TextToSpeech;]
-      [15] invokevirtual #191
+      [15] invokevirtual #201
         + Methodref [android/speech/tts/TextToSpeech.stop ()I]
       [18] pop
       [19] aload_0 v0
-      [20] getfield #154
+      [20] getfield #162
         + Fieldref [es/ricardo/lector/ResultadoActivity.e Landroid/speech/tts/TextToSpeech;]
-      [23] invokevirtual #189
+      [23] invokevirtual #199
         + Methodref [android/speech/tts/TextToSpeech.shutdown ()V]
       [26] aload_0 v0
-      [27] getfield #152
+      [27] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
       [30] ifnull +20 (target=50)
       [33] aload_0 v0
-      [34] getfield #152
+      [34] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [37] invokevirtual #179
+      [37] invokevirtual #188
         + Methodref [android/media/MediaPlayer.isPlaying ()Z]
       [40] ifeq +10 (target=50)
       [43] aload_0 v0
-      [44] getfield #152
+      [44] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [47] invokevirtual #183
+      [47] invokevirtual #192
         + Methodref [android/media/MediaPlayer.stop ()V]
       [50] aload_0 v0
-      [51] getfield #155
+      [51] getfield #163
         + Fieldref [es/ricardo/lector/ResultadoActivity.f Les/ricardo/lector/v;]
       [54] ifnull +12 (target=66)
       [57] aload_0 v0
-      [58] getfield #155
+      [58] getfield #163
         + Fieldref [es/ricardo/lector/ResultadoActivity.f Les/ricardo/lector/v;]
       [61] iconst_1
-      [62] invokevirtual #243
+      [62] invokevirtual #254
         + Methodref [es/ricardo/lector/v.cancel (Z)Z]
       [65] pop
       [66] aload_0 v0
-      [67] invokevirtual #211
+      [67] invokevirtual #221
         + Methodref [es/ricardo/lector/ResultadoActivity.a ()Z]
       [70] ifeq +59 (target=129)
       [73] aload_0 v0
-      [74] invokestatic #184
+      [74] invokestatic #193
         + Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
       [77] astore_1 v1
       [78] aload_1 v1
-      [79] invokeinterface #259
+      [79] invokeinterface #272
         + InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
       [84] astore_2 v2
       [85] aload_2 v2
       [86] aload_0 v0
       [87] ldc #28
         + Integer [2131165219]
-      [89] invokevirtual #227
+      [89] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [92] iconst_1
-      [93] invokeinterface #264
+      [93] invokeinterface #277
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
       [98] pop
       [99] aload_2 v2
       [100] aload_0 v0
       [101] ldc #29
         + Integer [2131165222]
-      [103] invokevirtual #227
+      [103] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [106] iconst_1
-      [107] invokeinterface #264
+      [107] invokeinterface #277
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
       [112] pop
       [113] aload_2 v2
-      [114] invokeinterface #263
+      [114] invokeinterface #276
         + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
       [119] pop
       [120] aload_0 v0
       [121] iconst_0
-      [122] invokevirtual #234
+      [122] invokevirtual #245
         + Methodref [es/ricardo/lector/ResultadoActivity.setResult (I)V]
       [125] aload_0 v0
-      [126] invokevirtual #223
+      [126] invokevirtual #234
         + Methodref [es/ricardo/lector/ResultadoActivity.finish ()V]
       [129] return
       Code attribute exceptions (count = 0):
@@ -79151,22 +79223,22 @@ Methods (count = 22):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 27, locals = 1, stack = 2):
       [0] aload_0 v0
-      [1] invokespecial #160
+      [1] invokespecial #168
         + Methodref [android/app/Activity.onDestroy ()V]
       [4] aload_0 v0
-      [5] getfield #152
+      [5] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
       [8] ifnull +10 (target=18)
       [11] aload_0 v0
-      [12] getfield #152
+      [12] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [15] invokevirtual #180
+      [15] invokevirtual #189
         + Methodref [android/media/MediaPlayer.release ()V]
       [18] aload_0 v0
       [19] aload_0 v0
-      [20] getfield #157
+      [20] getfield #165
         + Fieldref [es/ricardo/lector/ResultadoActivity.h Landroid/content/BroadcastReceiver;]
-      [23] invokevirtual #236
+      [23] invokevirtual #247
         + Methodref [es/ricardo/lector/ResultadoActivity.unregisterReceiver (Landroid/content/BroadcastReceiver;)V]
       [26] return
       Code attribute exceptions (count = 0):
@@ -79185,41 +79257,41 @@ Methods (count = 22):
       [20] iload_2 v2
       [21] ifne +64 (target=85)
       [24] aload_0 v0
-      [25] invokestatic #184
+      [25] invokestatic #193
         + Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
       [28] astore v4
       [30] aload v4
       [32] aload_0 v0
       [33] ldc #12
         + Integer [2131165188]
-      [35] invokevirtual #227
+      [35] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [38] iconst_0
-      [39] invokeinterface #260
+      [39] invokeinterface #273
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
       [44] ifne +37 (target=81)
       [47] aload v4
       [49] aload_0 v0
       [50] ldc #28
         + Integer [2131165219]
-      [52] invokevirtual #227
+      [52] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [55] iconst_0
-      [56] invokeinterface #260
+      [56] invokeinterface #273
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
       [61] ifne +20 (target=81)
       [64] aload v4
       [66] aload_0 v0
       [67] ldc #29
         + Integer [2131165222]
-      [69] invokevirtual #227
+      [69] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [72] iconst_0
-      [73] invokeinterface #260
+      [73] invokeinterface #273
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
       [78] ifeq +7 (target=85)
       [81] aload_0 v0
-      [82] invokespecial #221
+      [82] invokespecial #232
         + Methodref [es/ricardo/lector/ResultadoActivity.f ()V]
       [85] return
       Code attribute exceptions (count = 0):
@@ -79233,33 +79305,33 @@ Methods (count = 22):
       = private void b(java.lang.String)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 37, locals = 3, stack = 4):
-      [0] new #142
+      [0] new #147
         + Class [java/util/HashMap]
       [3] dup
-      [4] invokespecial #256
+      [4] invokespecial #269
         + Methodref [java/util/HashMap.<init> ()V]
       [7] astore_2 v2
       [8] aload_2 v2
-      [9] ldc #93
+      [9] ldc #97
         + String [utteranceId]
       [11] aload_0 v0
       [12] ldc #22
         + Integer [2131165201]
-      [14] invokevirtual #227
+      [14] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
-      [17] invokevirtual #257
+      [17] invokevirtual #270
         + Methodref [java/util/HashMap.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;]
       [20] pop
       [21] aload_0 v0
-      [22] getfield #154
+      [22] getfield #162
         + Fieldref [es/ricardo/lector/ResultadoActivity.e Landroid/speech/tts/TextToSpeech;]
       [25] aload_0 v0
       [26] aload_1 v1
-      [27] invokespecial #218
+      [27] invokespecial #228
         + Methodref [es/ricardo/lector/ResultadoActivity.c (Ljava/lang/String;)Ljava/lang/String;]
       [30] iconst_0
       [31] aload_2 v2
-      [32] invokevirtual #190
+      [32] invokevirtual #200
         + Methodref [android/speech/tts/TextToSpeech.speak (Ljava/lang/String;ILjava/util/HashMap;)I]
       [35] pop
       [36] return
@@ -79271,137 +79343,137 @@ Methods (count = 22):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 204, locals = 6, stack = 4):
       [0] aload_0 v0
-      [1] getfield #151
+      [1] getfield #159
         + Fieldref [es/ricardo/lector/ResultadoActivity.b Landroid/gesture/GestureLibrary;]
       [4] aload_2 v2
-      [5] invokevirtual #172
+      [5] invokevirtual #181
         + Methodref [android/gesture/GestureLibrary.recognize (Landroid/gesture/Gesture;)Ljava/util/ArrayList;]
       [8] astore_3 v3
       [9] aload_3 v3
-      [10] invokevirtual #255
+      [10] invokevirtual #268
         + Methodref [java/util/ArrayList.size ()I]
       [13] ifle +190 (target=203)
       [16] aload_3 v3
       [17] iconst_0
-      [18] invokevirtual #254
+      [18] invokevirtual #267
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [21] checkcast #111
+      [21] checkcast #115
         + Class [android/gesture/Prediction]
-      [24] getfield #149
+      [24] getfield #156
         + Fieldref [android/gesture/Prediction.score D]
-      [27] ldc2_w #145
+      [27] ldc2_w #152
         + Double [5.0]
       [30] dcmpl
       [31] ifle +172 (target=203)
       [34] aload_3 v3
       [35] iconst_0
-      [36] invokevirtual #254
+      [36] invokevirtual #267
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [39] checkcast #111
+      [39] checkcast #115
         + Class [android/gesture/Prediction]
-      [42] getfield #148
+      [42] getfield #155
         + Fieldref [android/gesture/Prediction.name Ljava/lang/String;]
       [45] astore v4
       [47] aload_0 v0
       [48] ldc #15
         + Integer [2131165194]
-      [50] invokevirtual #227
+      [50] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [53] aload v4
-      [55] invokevirtual #251
+      [55] invokevirtual #264
         + Methodref [java/lang/String.equalsIgnoreCase (Ljava/lang/String;)Z]
       [58] ifne +45 (target=103)
       [61] aload_0 v0
       [62] ldc #18
         + Integer [2131165197]
-      [64] invokevirtual #227
+      [64] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [67] aload v4
-      [69] invokevirtual #251
+      [69] invokevirtual #264
         + Methodref [java/lang/String.equalsIgnoreCase (Ljava/lang/String;)Z]
       [72] ifne +31 (target=103)
       [75] aload_0 v0
       [76] ldc #16
         + Integer [2131165195]
-      [78] invokevirtual #227
+      [78] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [81] aload v4
-      [83] invokevirtual #251
+      [83] invokevirtual #264
         + Methodref [java/lang/String.equalsIgnoreCase (Ljava/lang/String;)Z]
       [86] ifne +17 (target=103)
       [89] aload_0 v0
       [90] ldc #17
         + Integer [2131165196]
-      [92] invokevirtual #227
+      [92] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [95] aload v4
-      [97] invokevirtual #251
+      [97] invokevirtual #264
         + Methodref [java/lang/String.equalsIgnoreCase (Ljava/lang/String;)Z]
       [100] ifeq +7 (target=107)
       [103] aload_0 v0
-      [104] invokespecial #217
+      [104] invokespecial #227
         + Methodref [es/ricardo/lector/ResultadoActivity.c ()V]
       [107] aload_0 v0
       [108] ldc #15
         + Integer [2131165194]
-      [110] invokevirtual #227
+      [110] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [113] aload v4
-      [115] invokevirtual #251
+      [115] invokevirtual #264
         + Methodref [java/lang/String.equalsIgnoreCase (Ljava/lang/String;)Z]
       [118] ifeq +10 (target=128)
       [121] aload_0 v0
-      [122] invokespecial #221
+      [122] invokespecial #232
         + Methodref [es/ricardo/lector/ResultadoActivity.f ()V]
       [125] goto +78 (target=203)
       [128] aload_0 v0
       [129] ldc #18
         + Integer [2131165197]
-      [131] invokevirtual #227
+      [131] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [134] aload v4
-      [136] invokevirtual #251
+      [136] invokevirtual #264
         + Methodref [java/lang/String.equalsIgnoreCase (Ljava/lang/String;)Z]
       [139] ifeq +10 (target=149)
       [142] aload_0 v0
-      [143] invokespecial #219
+      [143] invokespecial #229
         + Methodref [es/ricardo/lector/ResultadoActivity.d ()V]
       [146] goto +57 (target=203)
       [149] aload_0 v0
       [150] ldc #16
         + Integer [2131165195]
-      [152] invokevirtual #227
+      [152] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [155] aload v4
-      [157] invokevirtual #251
+      [157] invokevirtual #264
         + Methodref [java/lang/String.equalsIgnoreCase (Ljava/lang/String;)Z]
       [160] ifeq +10 (target=170)
       [163] aload_0 v0
-      [164] invokespecial #220
+      [164] invokespecial #231
         + Methodref [es/ricardo/lector/ResultadoActivity.e ()V]
       [167] goto +36 (target=203)
       [170] aload_0 v0
       [171] ldc #17
         + Integer [2131165196]
-      [173] invokevirtual #227
+      [173] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [176] aload v4
-      [178] invokevirtual #251
+      [178] invokevirtual #264
         + Methodref [java/lang/String.equalsIgnoreCase (Ljava/lang/String;)Z]
       [181] ifeq +22 (target=203)
-      [184] new #102
+      [184] new #106
         + Class [android/content/Intent]
       [187] dup
       [188] aload_0 v0
-      [189] ldc #128
+      [189] ldc #133
         + Class [es/ricardo/lector/ConfirmacionActivity]
-      [191] invokespecial #167
+      [191] invokespecial #175
         + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
       [194] astore v5
       [196] aload_0 v0
       [197] aload v5
       [199] iconst_1
-      [200] invokevirtual #235
+      [200] invokevirtual #246
         + Methodref [es/ricardo/lector/ResultadoActivity.startActivityForResult (Landroid/content/Intent;I)V]
       [203] return
       Code attribute exceptions (count = 0):
@@ -79419,15 +79491,15 @@ Methods (count = 22):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 18, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #152
+      [1] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [4] invokevirtual #179
+      [4] invokevirtual #188
         + Methodref [android/media/MediaPlayer.isPlaying ()Z]
       [7] ifeq +10 (target=17)
       [10] aload_0 v0
-      [11] getfield #152
+      [11] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [14] invokevirtual #183
+      [14] invokevirtual #192
         + Methodref [android/media/MediaPlayer.stop ()V]
       [17] return
       Code attribute exceptions (count = 0):
@@ -79438,85 +79510,28 @@ Methods (count = 22):
     Access flags: 0x2
       = private void d()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 102, locals = 2, stack = 3):
+    + Code attribute instructions (code length = 27, locals = 2, stack = 2):
       [0] aload_0 v0
-      [1] getfield #153
+      [1] getfield #161
         + Fieldref [es/ricardo/lector/ResultadoActivity.d Landroid/widget/TextView;]
-      [4] invokevirtual #206
+      [4] invokevirtual #216
         + Methodref [android/widget/TextView.getText ()Ljava/lang/CharSequence;]
-      [7] invokeinterface #268
+      [7] invokeinterface #281
         + InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
       [12] astore_1 v1
       [13] aload_0 v0
-      [14] getfield #150
+      [14] getfield #158
         + Fieldref [es/ricardo/lector/ResultadoActivity.a Landroid/gesture/GestureOverlayView;]
       [17] aload_0 v0
-      [18] invokevirtual #174
+      [18] invokevirtual #183
         + Methodref [android/gesture/GestureOverlayView.removeOnGesturePerformedListener (Landroid/gesture/GestureOverlayView$OnGesturePerformedListener;)V]
-      [21] aload_1 v1
-      [22] ifnull +31 (target=53)
-      [25] ldc #33
-        + String []
-      [27] aload_1 v1
-      [28] invokevirtual #253
-        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
-      [31] invokevirtual #250
-        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [34] ifne +19 (target=53)
-      [37] aload_0 v0
-      [38] ldc #19
-        + Integer [2131165198]
-      [40] invokevirtual #227
-        + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
-      [43] aload_1 v1
-      [44] invokevirtual #253
-        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
-      [47] invokevirtual #250
-        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [50] ifeq +14 (target=64)
-      [53] aload_0 v0
-      [54] ldc #19
-        + Integer [2131165198]
-      [56] ldc #9
-        + Integer [2130968594]
-      [58] invokespecial #212
-        + Methodref [es/ricardo/lector/ResultadoActivity.a (II)V]
-      [61] goto +40 (target=101)
-      [64] aload_0 v0
-      [65] ldc #23
-        + Integer [2131165202]
-      [67] invokevirtual #227
-        + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
-      [70] aload_1 v1
-      [71] invokevirtual #253
-        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
-      [74] invokevirtual #250
-        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [77] ifeq +14 (target=91)
-      [80] aload_0 v0
-      [81] ldc #23
-        + Integer [2131165202]
-      [83] ldc #6
-        + Integer [2130968585]
-      [85] invokespecial #212
-        + Methodref [es/ricardo/lector/ResultadoActivity.a (II)V]
-      [88] goto +13 (target=101)
-      [91] aload_0 v0
-      [92] aload_1 v1
-      [93] invokespecial #213
-        + Methodref [es/ricardo/lector/ResultadoActivity.a (Ljava/lang/String;)V]
-      [96] aload_0 v0
-      [97] aload_1 v1
-      [98] invokespecial #216
-        + Methodref [es/ricardo/lector/ResultadoActivity.b (Ljava/lang/String;)V]
-      [101] return
+      [21] aload_0 v0
+      [22] aload_1 v1
+      [23] invokespecial #230
+        + Methodref [es/ricardo/lector/ResultadoActivity.d (Ljava/lang/String;)V]
+      [26] return
       Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 4):
-        - [53] Var: ...[a:java/lang/String], Stack: (empty)
-        - [64] Var: ..., Stack: (empty)
-        - [91] Var: ..., Stack: (empty)
-        - [101] Var: ..., Stack: (empty)
+      Code attribute attributes (attribute count = 0):
   + Method:       e()V
     Access flags: 0x2
       = private void e()
@@ -79524,10 +79539,10 @@ Methods (count = 22):
     + Code attribute instructions (code length = 10, locals = 1, stack = 2):
       [0] aload_0 v0
       [1] iconst_m1
-      [2] invokevirtual #234
+      [2] invokevirtual #245
         + Methodref [es/ricardo/lector/ResultadoActivity.setResult (I)V]
       [5] aload_0 v0
-      [6] invokevirtual #223
+      [6] invokevirtual #234
         + Methodref [es/ricardo/lector/ResultadoActivity.finish ()V]
       [9] return
       Code attribute exceptions (count = 0):
@@ -79538,35 +79553,35 @@ Methods (count = 22):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 44, locals = 1, stack = 4):
       [0] aload_0 v0
-      [1] getfield #152
+      [1] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
       [4] ifnull +7 (target=11)
       [7] aload_0 v0
-      [8] invokespecial #217
+      [8] invokespecial #227
         + Methodref [es/ricardo/lector/ResultadoActivity.c ()V]
       [11] aload_0 v0
       [12] aload_0 v0
       [13] ldc #8
         + Integer [2130968593]
-      [15] invokestatic #178
+      [15] invokestatic #187
         + Methodref [android/media/MediaPlayer.create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
-      [18] putfield #152
+      [18] putfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
       [21] aload_0 v0
-      [22] getfield #152
+      [22] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [25] new #132
+      [25] new #137
         + Class [es/ricardo/lector/s]
       [28] dup
       [29] aload_0 v0
-      [30] invokespecial #239
+      [30] invokespecial #250
         + Methodref [es/ricardo/lector/s.<init> (Les/ricardo/lector/ResultadoActivity;)V]
-      [33] invokevirtual #181
+      [33] invokevirtual #190
         + Methodref [android/media/MediaPlayer.setOnCompletionListener (Landroid/media/MediaPlayer$OnCompletionListener;)V]
       [36] aload_0 v0
-      [37] getfield #152
+      [37] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [40] invokevirtual #182
+      [40] invokevirtual #191
         + Methodref [android/media/MediaPlayer.start ()V]
       [43] return
       Code attribute exceptions (count = 0):
@@ -79579,33 +79594,33 @@ Methods (count = 22):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 119, locals = 3, stack = 4):
       [0] aload_0 v0
-      [1] getfield #153
+      [1] getfield #161
         + Fieldref [es/ricardo/lector/ResultadoActivity.d Landroid/widget/TextView;]
-      [4] invokevirtual #206
+      [4] invokevirtual #216
         + Methodref [android/widget/TextView.getText ()Ljava/lang/CharSequence;]
       [7] ifnull +18 (target=25)
       [10] ldc #33
         + String []
       [12] aload_0 v0
-      [13] getfield #153
+      [13] getfield #161
         + Fieldref [es/ricardo/lector/ResultadoActivity.d Landroid/widget/TextView;]
-      [16] invokevirtual #206
+      [16] invokevirtual #216
         + Methodref [android/widget/TextView.getText ()Ljava/lang/CharSequence;]
-      [19] invokevirtual #250
+      [19] invokevirtual #263
         + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [22] ifeq +56 (target=78)
       [25] aload_0 v0
-      [26] invokestatic #184
+      [26] invokestatic #193
         + Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
       [29] astore_1 v1
       [30] aload_1 v1
       [31] aload_0 v0
       [32] ldc #13
         + Integer [2131165189]
-      [34] invokevirtual #227
+      [34] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [37] aconst_null
-      [38] invokeinterface #262
+      [38] invokeinterface #275
         + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [43] astore_2 v2
       [44] aload_2 v2
@@ -79613,53 +79628,53 @@ Methods (count = 22):
       [48] ldc #33
         + String []
       [50] aload_2 v2
-      [51] invokevirtual #253
+      [51] invokevirtual #266
         + Methodref [java/lang/String.trim ()Ljava/lang/String;]
-      [54] invokevirtual #250
+      [54] invokevirtual #263
         + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [57] ifne +11 (target=68)
       [60] aload_0 v0
       [61] aload_2 v2
-      [62] invokespecial #213
+      [62] invokespecial #223
         + Methodref [es/ricardo/lector/ResultadoActivity.a (Ljava/lang/String;)V]
       [65] goto +13 (target=78)
       [68] aload_0 v0
       [69] aload_0 v0
       [70] ldc #19
         + Integer [2131165198]
-      [72] invokevirtual #227
+      [72] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
-      [75] invokespecial #213
+      [75] invokespecial #223
         + Methodref [es/ricardo/lector/ResultadoActivity.a (Ljava/lang/String;)V]
       [78] aload_0 v0
-      [79] getfield #150
+      [79] getfield #158
         + Fieldref [es/ricardo/lector/ResultadoActivity.a Landroid/gesture/GestureOverlayView;]
       [82] aload_0 v0
-      [83] invokevirtual #173
+      [83] invokevirtual #182
         + Methodref [android/gesture/GestureOverlayView.addOnGesturePerformedListener (Landroid/gesture/GestureOverlayView$OnGesturePerformedListener;)V]
       [86] aload_0 v0
       [87] aload_0 v0
       [88] ldc #7
         + Integer [2130968592]
-      [90] invokestatic #178
+      [90] invokestatic #187
         + Methodref [android/media/MediaPlayer.create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
-      [93] putfield #152
+      [93] putfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
       [96] aload_0 v0
-      [97] getfield #152
+      [97] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [100] new #133
+      [100] new #138
         + Class [es/ricardo/lector/t]
       [103] dup
       [104] aload_0 v0
-      [105] invokespecial #240
+      [105] invokespecial #251
         + Methodref [es/ricardo/lector/t.<init> (Les/ricardo/lector/ResultadoActivity;)V]
-      [108] invokevirtual #181
+      [108] invokevirtual #190
         + Methodref [android/media/MediaPlayer.setOnCompletionListener (Landroid/media/MediaPlayer$OnCompletionListener;)V]
       [111] aload_0 v0
-      [112] getfield #152
+      [112] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [115] invokevirtual #182
+      [115] invokevirtual #191
         + Methodref [android/media/MediaPlayer.start ()V]
       [118] return
       Code attribute exceptions (count = 0):
@@ -79676,32 +79691,32 @@ Methods (count = 22):
       [0] aload_0 v0
       [1] aload_0 v0
       [2] iload_1 v1
-      [3] invokevirtual #227
+      [3] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
-      [6] invokespecial #213
+      [6] invokespecial #223
         + Methodref [es/ricardo/lector/ResultadoActivity.a (Ljava/lang/String;)V]
       [9] aload_0 v0
       [10] aload_0 v0
       [11] iload_2 v2
-      [12] invokestatic #178
+      [12] invokestatic #187
         + Methodref [android/media/MediaPlayer.create (Landroid/content/Context;I)Landroid/media/MediaPlayer;]
-      [15] putfield #152
+      [15] putfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
       [18] aload_0 v0
-      [19] getfield #152
+      [19] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [22] new #134
+      [22] new #139
         + Class [es/ricardo/lector/u]
       [25] dup
       [26] aload_0 v0
-      [27] invokespecial #241
+      [27] invokespecial #252
         + Methodref [es/ricardo/lector/u.<init> (Les/ricardo/lector/ResultadoActivity;)V]
-      [30] invokevirtual #181
+      [30] invokevirtual #190
         + Methodref [android/media/MediaPlayer.setOnCompletionListener (Landroid/media/MediaPlayer$OnCompletionListener;)V]
       [33] aload_0 v0
-      [34] getfield #152
+      [34] getfield #160
         + Fieldref [es/ricardo/lector/ResultadoActivity.c Landroid/media/MediaPlayer;]
-      [37] invokevirtual #182
+      [37] invokevirtual #191
         + Methodref [android/media/MediaPlayer.start ()V]
       [40] return
       Code attribute exceptions (count = 0):
@@ -79714,72 +79729,72 @@ Methods (count = 22):
       [0] aload_0 v0
       [1] ldc #21
         + Integer [2131165200]
-      [3] invokevirtual #227
+      [3] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
-      [6] invokestatic #245
+      [6] invokestatic #256
         + Methodref [java/lang/Boolean.parseBoolean (Ljava/lang/String;)Z]
       [9] ifne +149 (target=158)
       [12] aload_0 v0
-      [13] invokestatic #184
+      [13] invokestatic #193
         + Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
       [16] astore_1 v1
       [17] aload_1 v1
       [18] aload_0 v0
       [19] ldc #14
         + Integer [2131165190]
-      [21] invokevirtual #227
+      [21] invokevirtual #238
         + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
       [24] iconst_0
-      [25] invokeinterface #261
+      [25] invokeinterface #274
         + InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
       [30] istore_2 v2
       [31] iload_2 v2
       [32] ifeq +126 (target=158)
       [35] aload_0 v0
-      [36] ldc #94
+      [36] ldc #98
         + String [window]
-      [38] invokevirtual #228
+      [38] invokevirtual #239
         + Methodref [es/ricardo/lector/ResultadoActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [41] checkcast #122
+      [41] checkcast #127
         + Class [android/view/WindowManager]
       [44] astore_3 v3
-      [45] new #112
+      [45] new #116
         + Class [android/graphics/Rect]
       [48] dup
-      [49] invokespecial #175
+      [49] invokespecial #184
         + Methodref [android/graphics/Rect.<init> ()V]
       [52] astore v4
       [54] aload_3 v3
-      [55] invokeinterface #267
+      [55] invokeinterface #280
         + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
       [60] aload v4
-      [62] invokevirtual #192
+      [62] invokevirtual #202
         + Methodref [android/view/Display.getRectSize (Landroid/graphics/Rect;)V]
       [65] aload_0 v0
       [66] ldc #32
         + Integer [2131361800]
-      [68] invokevirtual #222
+      [68] invokevirtual #233
         + Methodref [es/ricardo/lector/ResultadoActivity.findViewById (I)Landroid/view/View;]
-      [71] checkcast #125
+      [71] checkcast #130
         + Class [android/widget/LinearLayout]
       [74] astore v5
       [76] aload v5
-      [78] new #123
+      [78] new #128
         + Class [android/widget/FrameLayout$LayoutParams]
       [81] dup
       [82] iconst_m1
       [83] aload v4
-      [85] invokevirtual #176
+      [85] invokevirtual #185
         + Methodref [android/graphics/Rect.height ()I]
       [88] bipush 12
       [90] idiv
       [91] i2f
-      [92] invokestatic #249
+      [92] invokestatic #262
         + Methodref [java/lang/Math.round (F)I]
       [95] bipush 80
-      [97] invokespecial #198
+      [97] invokespecial #208
         + Methodref [android/widget/FrameLayout$LayoutParams.<init> (III)V]
-      [100] invokevirtual #201
+      [100] invokevirtual #211
         + Methodref [android/widget/LinearLayout.setLayoutParams (Landroid/view/ViewGroup$LayoutParams;)V]
       [103] bipush 15
       [105] istore v6
@@ -79788,15 +79803,15 @@ Methods (count = 22):
       [112] iload v6
       [114] iconst_1
       [115] isub
-      [116] invokevirtual #200
+      [116] invokevirtual #210
         + Methodref [android/widget/LinearLayout.getChildAt (I)Landroid/view/View;]
-      [119] checkcast #124
+      [119] checkcast #129
         + Class [android/widget/ImageView]
       [122] astore v7
       [124] aload v7
       [126] ldc #1
         + Integer [2130837508]
-      [128] invokevirtual #199
+      [128] invokevirtual #209
         + Methodref [android/widget/ImageView.setImageResource (I)V]
       [131] iinc v6, -1
       [134] iload v6
@@ -79809,10 +79824,10 @@ Methods (count = 22):
       [148] aload_0 v0
       [149] ldc #32
         + Integer [2131361800]
-      [151] invokevirtual #222
+      [151] invokevirtual #233
         + Methodref [es/ricardo/lector/ResultadoActivity.findViewById (I)Landroid/view/View;]
       [154] iconst_0
-      [155] invokevirtual #195
+      [155] invokevirtual #205
         + Methodref [android/view/View.setVisibility (I)V]
       [158] return
       Code attribute exceptions (count = 0):
@@ -79828,42 +79843,42 @@ Methods (count = 22):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 64, locals = 5, stack = 2):
       [0] aload_0 v0
-      [1] invokevirtual #225
+      [1] invokevirtual #236
         + Methodref [es/ricardo/lector/ResultadoActivity.getApplicationContext ()Landroid/content/Context;]
       [4] astore_1 v1
       [5] aload_1 v1
-      [6] ldc #78
+      [6] ldc #82
         + String [activity]
-      [8] invokevirtual #166
+      [8] invokevirtual #174
         + Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [11] checkcast #98
+      [11] checkcast #102
         + Class [android/app/ActivityManager]
       [14] astore_2 v2
       [15] aload_2 v2
       [16] iconst_1
-      [17] invokevirtual #163
+      [17] invokevirtual #171
         + Methodref [android/app/ActivityManager.getRunningTasks (I)Ljava/util/List;]
       [20] astore_3 v3
       [21] aload_3 v3
-      [22] invokeinterface #270
+      [22] invokeinterface #283
         + InterfaceMethodref [java/util/List.isEmpty ()Z]
       [27] ifne +35 (target=62)
       [30] aload_3 v3
       [31] iconst_0
-      [32] invokeinterface #269
+      [32] invokeinterface #282
         + InterfaceMethodref [java/util/List.get (I)Ljava/lang/Object;]
-      [37] checkcast #99
+      [37] checkcast #103
         + Class [android/app/ActivityManager$RunningTaskInfo]
-      [40] getfield #147
+      [40] getfield #154
         + Fieldref [android/app/ActivityManager$RunningTaskInfo.topActivity Landroid/content/ComponentName;]
       [43] astore v4
       [45] aload v4
-      [47] invokevirtual #164
+      [47] invokevirtual #172
         + Methodref [android/content/ComponentName.getPackageName ()Ljava/lang/String;]
       [50] aload_1 v1
-      [51] invokevirtual #165
+      [51] invokevirtual #173
         + Methodref [android/content/Context.getPackageName ()Ljava/lang/String;]
-      [54] invokevirtual #250
+      [54] invokevirtual #263
         + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [57] ifne +5 (target=62)
       [60] iconst_1
@@ -79878,13 +79893,13 @@ Methods (count = 22):
     Access flags: 0x2
       = private java.lang.String c(java.lang.String)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 272, locals = 2, stack = 3):
+    + Code attribute instructions (code length = 290, locals = 2, stack = 3):
       [0] aload_1 v1
       [1] ldc #35
         + String [ I ]
       [3] ldc #44
         + String [ Primero ]
-      [5] invokevirtual #252
+      [5] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [8] astore_1 v1
       [9] aload_1 v1
@@ -79892,7 +79907,7 @@ Methods (count = 22):
         + String [ II ]
       [12] ldc #46
         + String [ Segunda ]
-      [14] invokevirtual #252
+      [14] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [17] astore_1 v1
       [18] aload_1 v1
@@ -79900,7 +79915,7 @@ Methods (count = 22):
         + String [ Il ]
       [21] ldc #46
         + String [ Segunda ]
-      [23] invokevirtual #252
+      [23] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [26] astore_1 v1
       [27] aload_1 v1
@@ -79908,7 +79923,7 @@ Methods (count = 22):
         + String [ III ]
       [30] ldc #49
         + String [ Tercero ]
-      [32] invokevirtual #252
+      [32] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [35] astore_1 v1
       [36] aload_1 v1
@@ -79916,7 +79931,7 @@ Methods (count = 22):
         + String [ IV ]
       [39] ldc #34
         + String [ Cuarto ]
-      [41] invokevirtual #252
+      [41] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [44] astore_1 v1
       [45] aload_1 v1
@@ -79924,7 +79939,7 @@ Methods (count = 22):
         + String [ V ]
       [48] ldc #45
         + String [ Quinto ]
-      [50] invokevirtual #252
+      [50] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [53] astore_1 v1
       [54] aload_1 v1
@@ -79932,7 +79947,7 @@ Methods (count = 22):
         + String [ VI ]
       [57] ldc #47
         + String [ Sexto ]
-      [59] invokevirtual #252
+      [59] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [62] astore_1 v1
       [63] aload_1 v1
@@ -79940,7 +79955,7 @@ Methods (count = 22):
         + String [ VII ]
       [66] ldc #48
         + String [ S?ptimo ]
-      [68] invokevirtual #252
+      [68] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [71] astore_1 v1
       [72] aload_1 v1
@@ -79948,7 +79963,7 @@ Methods (count = 22):
         + String [ VIII ]
       [75] ldc #42
         + String [ Octavo ]
-      [77] invokevirtual #252
+      [77] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [80] astore_1 v1
       [81] aload_1 v1
@@ -79956,180 +79971,271 @@ Methods (count = 22):
         + String [ IX ]
       [84] ldc #41
         + String [ Noveno ]
-      [86] invokevirtual #252
+      [86] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [89] astore_1 v1
       [90] aload_1 v1
-      [91] ldc #74
+      [91] ldc #78
         + String [LTR ]
-      [93] ldc #55
+      [93] ldc #57
         + String [ letra ]
-      [95] invokevirtual #252
+      [95] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [98] astore_1 v1
       [99] aload_1 v1
-      [100] ldc #71
+      [100] ldc #75
         + String [Cl ]
       [102] ldc #54
         + String [ calle ]
-      [104] invokevirtual #252
+      [104] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [107] astore_1 v1
       [108] aload_1 v1
-      [109] ldc #70
+      [109] ldc #74
         + String [CL ]
       [111] ldc #54
         + String [ calle ]
-      [113] invokevirtual #252
+      [113] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [116] astore_1 v1
       [117] aload_1 v1
       [118] ldc #43
         + String [ PTA.]
-      [120] ldc #56
+      [120] ldc #60
         + String [ puerta]
-      [122] invokevirtual #252
+      [122] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [125] astore_1 v1
       [126] aload_1 v1
-      [127] ldc #77
+      [127] ldc #81
         + String [\|]
-      [129] ldc #73
+      [129] ldc #77
         + String [I]
-      [131] invokevirtual #252
+      [131] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [134] astore_1 v1
       [135] aload_1 v1
-      [136] ldc #75
+      [136] ldc #79
         + String [N?]
-      [138] ldc #76
+      [138] ldc #80
         + String [N?mero]
-      [140] invokevirtual #252
+      [140] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [143] astore_1 v1
       [144] aload_1 v1
-      [145] ldc #60
+      [145] ldc #64
         + String [1?]
-      [147] ldc #86
+      [147] ldc #90
         + String [primero]
-      [149] invokevirtual #252
+      [149] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [152] astore_1 v1
       [153] aload_1 v1
-      [154] ldc #61
+      [154] ldc #65
         + String [2?]
-      [156] ldc #88
+      [156] ldc #92
         + String [segundo]
-      [158] invokevirtual #252
+      [158] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [161] astore_1 v1
       [162] aload_1 v1
-      [163] ldc #63
+      [163] ldc #67
         + String [3?]
-      [165] ldc #92
+      [165] ldc #96
         + String [tercero]
-      [167] invokevirtual #252
+      [167] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [170] astore_1 v1
       [171] aload_1 v1
-      [172] ldc #64
+      [172] ldc #68
         + String [4?]
-      [174] ldc #79
+      [174] ldc #83
         + String [cuarto]
-      [176] invokevirtual #252
+      [176] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [179] astore_1 v1
       [180] aload_1 v1
-      [181] ldc #65
+      [181] ldc #69
         + String [5?]
-      [183] ldc #87
+      [183] ldc #91
         + String [quinto]
-      [185] invokevirtual #252
+      [185] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [188] astore_1 v1
       [189] aload_1 v1
-      [190] ldc #66
+      [190] ldc #70
         + String [6?]
-      [192] ldc #89
+      [192] ldc #93
         + String [sexto]
-      [194] invokevirtual #252
+      [194] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [197] astore_1 v1
       [198] aload_1 v1
-      [199] ldc #67
+      [199] ldc #71
         + String [7?]
-      [201] ldc #91
+      [201] ldc #95
         + String [s?ptimo]
-      [203] invokevirtual #252
+      [203] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [206] astore_1 v1
       [207] aload_1 v1
-      [208] ldc #68
+      [208] ldc #72
         + String [8?]
-      [210] ldc #85
+      [210] ldc #89
         + String [octavo]
-      [212] invokevirtual #252
+      [212] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [215] astore_1 v1
       [216] aload_1 v1
-      [217] ldc #69
+      [217] ldc #73
         + String [9?]
-      [219] ldc #84
+      [219] ldc #88
         + String [noveno]
-      [221] invokevirtual #252
+      [221] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [224] astore_1 v1
       [225] aload_1 v1
-      [226] ldc #59
+      [226] ldc #63
         + String [10?]
-      [228] ldc #80
+      [228] ldc #84
         + String [d?cimo]
-      [230] invokevirtual #252
+      [230] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [233] astore_1 v1
       [234] aload_1 v1
-      [235] ldc #96
+      [235] ldc #100
         + String [?]
-      [237] ldc #81
+      [237] ldc #85
         + String [i]
-      [239] invokevirtual #252
+      [239] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [242] astore_1 v1
       [243] aload_1 v1
-      [244] ldc #82
+      [244] ldc #86
         + String [kWh]
-      [246] ldc #83
+      [246] ldc #87
         + String [kilovatios hora]
-      [248] invokevirtual #252
+      [248] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [251] astore_1 v1
       [252] aload_1 v1
-      [253] ldc #57
+      [253] ldc #61
         + String [!]
-      [255] ldc #73
+      [255] ldc #77
         + String [I]
-      [257] invokevirtual #252
+      [257] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [260] astore_1 v1
       [261] aload_1 v1
-      [262] ldc #95
+      [262] ldc #99
         + String [?]
-      [264] ldc #73
+      [264] ldc #77
         + String [I]
-      [266] invokevirtual #252
+      [266] invokevirtual #265
         + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [269] astore_1 v1
       [270] aload_1 v1
-      [271] areturn
+      [271] ldc #56
+        + String [ cm]
+      [273] ldc #55
+        + String [ cent?metros]
+      [275] invokevirtual #265
+        + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+      [278] astore_1 v1
+      [279] aload_1 v1
+      [280] ldc #59
+        + String [ mm]
+      [282] ldc #58
+        + String [ mil?metros]
+      [284] invokevirtual #265
+        + Methodref [java/lang/String.replaceAll (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+      [287] astore_1 v1
+      [288] aload_1 v1
+      [289] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
+  + Method:       d(Ljava/lang/String;)V
+    Access flags: 0x2
+      = private void d(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 91, locals = 2, stack = 3):
+      [0] aload_1 v1
+      [1] ifnull +31 (target=32)
+      [4] ldc #33
+        + String []
+      [6] aload_1 v1
+      [7] invokevirtual #266
+        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
+      [10] invokevirtual #263
+        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [13] ifne +19 (target=32)
+      [16] aload_0 v0
+      [17] ldc #19
+        + Integer [2131165198]
+      [19] invokevirtual #238
+        + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
+      [22] aload_1 v1
+      [23] invokevirtual #266
+        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
+      [26] invokevirtual #263
+        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [29] ifeq +14 (target=43)
+      [32] aload_0 v0
+      [33] ldc #19
+        + Integer [2131165198]
+      [35] ldc #9
+        + Integer [2130968594]
+      [37] invokespecial #222
+        + Methodref [es/ricardo/lector/ResultadoActivity.a (II)V]
+      [40] goto +50 (target=90)
+      [43] aload_0 v0
+      [44] ldc #23
+        + Integer [2131165202]
+      [46] invokevirtual #238
+        + Methodref [es/ricardo/lector/ResultadoActivity.getString (I)Ljava/lang/String;]
+      [49] aload_1 v1
+      [50] invokevirtual #266
+        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
+      [53] invokevirtual #263
+        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [56] ifeq +14 (target=70)
+      [59] aload_0 v0
+      [60] ldc #23
+        + Integer [2131165202]
+      [62] ldc #6
+        + Integer [2130968585]
+      [64] invokespecial #222
+        + Methodref [es/ricardo/lector/ResultadoActivity.a (II)V]
+      [67] goto +23 (target=90)
+      [70] aload_0 v0
+      [71] aload_1 v1
+      [72] invokespecial #223
+        + Methodref [es/ricardo/lector/ResultadoActivity.a (Ljava/lang/String;)V]
+      [75] aload_0 v0
+      [76] getfield #162
+        + Fieldref [es/ricardo/lector/ResultadoActivity.e Landroid/speech/tts/TextToSpeech;]
+      [79] invokevirtual #195
+        + Methodref [android/speech/tts/TextToSpeech.getLanguage ()Ljava/util/Locale;]
+      [82] ifnull +8 (target=90)
+      [85] aload_0 v0
+      [86] aload_1 v1
+      [87] invokespecial #226
+        + Methodref [es/ricardo/lector/ResultadoActivity.b (Ljava/lang/String;)V]
+      [90] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 4):
+        - [32] Var: ..., Stack: (empty)
+        - [43] Var: ..., Stack: (empty)
+        - [70] Var: ..., Stack: (empty)
+        - [90] Var: ..., Stack: (empty)
   + Method:       a(Les/ricardo/lector/ResultadoActivity;)V
     Access flags: 0x1008
       = static synthetic void a(es.ricardo.lector.ResultadoActivity)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #224
+      [1] invokespecial #235
         + Methodref [es/ricardo/lector/ResultadoActivity.g ()V]
       [4] return
       Code attribute exceptions (count = 0):
@@ -81487,12 +81593,10 @@ Methods (count = 11):
       - ExceptionInfo (26 -> 391: 394):
       + Class [java/lang/Exception]
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 8):
+      + Stack map table attribute (count = 6):
         - [340] Var: [a:es/ricardo/lector/v][a:[Ljava/lang/String;][a:org/apache/http/client/HttpClient][a:org/apache/http/params/HttpParams][a:org/apache/http/client/methods/HttpPost][a:org/json/JSONObject][a:org/apache/http/entity/StringEntity][a:org/apache/http/HttpResponse][a:java/lang/String][a:a/a/a/g][a:a/a/a/e], Stack: 
-        - [346] Var: ..., Stack: (empty)
         - [349] Var: ..., Stack: (empty)
-        - [391] Var: [a:es/ricardo/lector/v][a:[Ljava/lang/String;], Stack: 
-        - [394] Var: ..., Stack: [a:java/lang/Exception]
+        - [394] Var: [a:es/ricardo/lector/v][a:[Ljava/lang/String;], Stack: [a:java/lang/Exception]
         - [442] Var: ...[a:java/lang/Exception], Stack: (empty)
         - [469] Var: ..., Stack: (empty)
         - [474] Var: -1, Stack: (empty)
@@ -82066,11 +82170,10 @@ Methods (count = 2):
       [381] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 10):
+      + Stack map table attribute (count = 9):
         - [60] Var: [a:es/ricardo/servicio/Escuchador][a:android/content/Context][a:android/content/Intent][a:android/content/Intent][i][a:android/app/ActivityManager][a:java/util/List][T][a:java/util/Iterator], Stack: 
         - [91] Var: ..., Stack: (empty)
         - [156] Var: [a:es/ricardo/servicio/Escuchador][a:android/content/Context][a:android/content/Intent][a:android/content/Intent][i][a:android/app/ActivityManager][a:java/util/List][i], Stack: 
-        - [257] Var: ..., Stack: (empty)
         - [260] Var: ..., Stack: (empty)
         - [320] Var: ...[a:android/content/SharedPreferences], Stack: (empty)
         - [336] Var: ..., Stack: (empty)

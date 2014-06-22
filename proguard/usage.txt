@@ -1742,7 +1742,7 @@ es.ricardo.lector.R$string
 es.ricardo.lector.R$style
 es.ricardo.lector.ResultadoActivity:
     static final int ACTION_VALUE
-    253:259:public void showToast(java.lang.String)
+    255:261:public void showToast(java.lang.String)
 es.ricardo.lector.ResultadoActivity$3
 es.ricardo.lector.TareaAsincrona:
     100:101:public void showToast(java.lang.String)

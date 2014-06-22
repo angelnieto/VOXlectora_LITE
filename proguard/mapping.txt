@@ -1683,11 +1683,11 @@ es.ricardo.lector.CamaraActivity -> es.ricardo.lector.CamaraActivity:
     void detener(boolean) -> a
     void onBackPressed() -> onBackPressed
     void access$0(es.ricardo.lector.CamaraActivity,boolean) -> a
-    android.hardware.Camera access$1(es.ricardo.lector.CamaraActivity) -> a
-    android.widget.Button access$2(es.ricardo.lector.CamaraActivity) -> b
-    java.lang.String access$3(es.ricardo.lector.CamaraActivity) -> c
-    void access$4(es.ricardo.lector.CamaraActivity,android.media.MediaPlayer) -> a
-    android.media.MediaPlayer access$5(es.ricardo.lector.CamaraActivity) -> d
+    android.widget.Button access$1(es.ricardo.lector.CamaraActivity) -> a
+    java.lang.String access$2(es.ricardo.lector.CamaraActivity) -> b
+    void access$3(es.ricardo.lector.CamaraActivity,android.media.MediaPlayer) -> a
+    android.media.MediaPlayer access$4(es.ricardo.lector.CamaraActivity) -> c
+    android.hardware.Camera access$5(es.ricardo.lector.CamaraActivity) -> d
     void access$6(es.ricardo.lector.CamaraActivity,float) -> a
     void access$7(es.ricardo.lector.CamaraActivity,float) -> b
     void access$8(es.ricardo.lector.CamaraActivity,int) -> a
@@ -1697,25 +1697,25 @@ es.ricardo.lector.CamaraActivity$1 -> es.ricardo.lector.c:
 es.ricardo.lector.CamaraActivity$2 -> es.ricardo.lector.d:
     es.ricardo.lector.CamaraActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-    es.ricardo.lector.CamaraActivity access$0(es.ricardo.lector.CamaraActivity$2) -> a
-es.ricardo.lector.CamaraActivity$2$1 -> es.ricardo.lector.e:
-    es.ricardo.lector.CamaraActivity$2 this$1 -> a
-    void onShutter() -> onShutter
-es.ricardo.lector.CamaraActivity$2$2 -> es.ricardo.lector.f:
-    es.ricardo.lector.CamaraActivity$2 this$1 -> a
-    void onPictureTaken(byte[],android.hardware.Camera) -> onPictureTaken
-es.ricardo.lector.CamaraActivity$2$3 -> es.ricardo.lector.g:
-    es.ricardo.lector.CamaraActivity$2 this$1 -> a
-    void onPictureTaken(byte[],android.hardware.Camera) -> onPictureTaken
-    void done(byte[]) -> a
-es.ricardo.lector.CamaraActivity$3 -> es.ricardo.lector.h:
+es.ricardo.lector.CamaraActivity$3 -> es.ricardo.lector.e:
     es.ricardo.lector.CamaraActivity this$0 -> a
     void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
     void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
-es.ricardo.lector.CamaraActivity$AutoFocalizador -> es.ricardo.lector.i:
+es.ricardo.lector.CamaraActivity$AutoFocalizador -> es.ricardo.lector.f:
     boolean isAutoFocused -> b
     es.ricardo.lector.CamaraActivity this$0 -> a
     void onAutoFocus(boolean,android.hardware.Camera) -> onAutoFocus
+    es.ricardo.lector.CamaraActivity access$1(es.ricardo.lector.CamaraActivity$AutoFocalizador) -> a
+es.ricardo.lector.CamaraActivity$AutoFocalizador$1 -> es.ricardo.lector.g:
+    es.ricardo.lector.CamaraActivity$AutoFocalizador this$1 -> a
+    void onShutter() -> onShutter
+es.ricardo.lector.CamaraActivity$AutoFocalizador$2 -> es.ricardo.lector.h:
+    es.ricardo.lector.CamaraActivity$AutoFocalizador this$1 -> a
+    void onPictureTaken(byte[],android.hardware.Camera) -> onPictureTaken
+es.ricardo.lector.CamaraActivity$AutoFocalizador$3 -> es.ricardo.lector.i:
+    es.ricardo.lector.CamaraActivity$AutoFocalizador this$1 -> a
+    void onPictureTaken(byte[],android.hardware.Camera) -> onPictureTaken
+    void done(byte[]) -> a
 es.ricardo.lector.ConfirmacionActivity -> es.ricardo.lector.ConfirmacionActivity:
     android.widget.TextView tv -> d
     android.view.LayoutInflater myInflater -> e
@@ -1807,6 +1807,7 @@ es.ricardo.lector.ResultadoActivity -> es.ricardo.lector.ResultadoActivity:
     void mostrarVeces() -> h
     boolean isHomeButtonPressed() -> a
     java.lang.String arreglar(java.lang.String) -> c
+    void filtrarResultados(java.lang.String) -> d
     void access$0(es.ricardo.lector.ResultadoActivity) -> a
 es.ricardo.lector.ResultadoActivity$1 -> es.ricardo.lector.q:
     es.ricardo.lector.ResultadoActivity this$0 -> a
