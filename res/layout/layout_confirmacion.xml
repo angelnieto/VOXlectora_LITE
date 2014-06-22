@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margen"
+    android:paddingLeft="@dimen/margen"
+    android:paddingRight="@dimen/margen"
+    android:paddingTop="@dimen/margen"
+    android:background="@android:color/white"
+    tools:context=".ConfirmacionActivity" >
+    
+    <FrameLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent">
+	        
+        <TextView
+        	android:id="@+id/texto1"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/texto" />
+    
+	    <LinearLayout
+	        	android:id="@+id/rayos1"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="bottom"
+		        android:gravity="center"
+		        android:orientation="horizontal"
+		        android:visibility="invisible">
+	       <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on" 
+		            android:adjustViewBounds="true"/>
+		   <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on"
+		            android:adjustViewBounds="true"/>
+		   <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on"
+		            android:adjustViewBounds="true"/>
+		   <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on" 
+		            android:adjustViewBounds="true"/>
+		    <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on" 
+		            android:adjustViewBounds="true"/>
+		    <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on"
+		            android:adjustViewBounds="true" />
+		    <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on" 
+		            android:adjustViewBounds="true"/>
+		    <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on" 
+		            android:adjustViewBounds="true"/>
+		   <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on" 
+		            android:adjustViewBounds="true"/>
+		  <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on" 
+		            android:adjustViewBounds="true"/>	
+		   <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on" 
+		            android:adjustViewBounds="true"/>
+		  <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on" 
+		            android:adjustViewBounds="true"/>
+		  <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on" 
+		            android:adjustViewBounds="true"/>
+		  <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on" 
+		            android:adjustViewBounds="true"/>
+		   <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/raya_on" 
+		            android:adjustViewBounds="true"/>
+		   		                
+		    </LinearLayout>
+		    
+	   </FrameLayout>
+
+</LinearLayout>
