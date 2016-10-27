@@ -27,6 +27,10 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.VideoView;
 
+/**
+ *  Clase encargada de manejar la Activity del video introductorio
+ */
+
 public class IntroActivity extends Activity{
 	
 	static final int ACTION_VALUE=1;
@@ -37,6 +41,18 @@ public class IntroActivity extends Activity{
 	VideoView v=null;
 	boolean continuar=false;
 	boolean soportaBarraTitulo=false;
+
+	private final BroadcastReceiver abcd = new BroadcastReceiver() {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+
+			SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(IntroActivity.this);
+			if(!settings.getBoolean(getString(R.string.home), false))
+				finish();
+		}
+
+	};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -48,7 +64,7 @@ public class IntroActivity extends Activity{
 		SharedPreferences.Editor editor = settings.edit();
 		if(!settings.getBoolean(getString(R.string.escuchador), false)){
 			if(!settings.getBoolean(getString(R.string.back), false))
-			editor.remove(getString(R.string.cascos));
+				editor.remove(getString(R.string.cascos));
 		}else
 			editor.putBoolean(getString(R.string.cascos),true);
 		editor.remove(getString(R.string.escuchador));
@@ -70,13 +86,13 @@ public class IntroActivity extends Activity{
 		editor.remove(getString(R.string.texto));
 		editor.remove(getString(R.string.veces));
 		editor.remove(getString(R.string.back));
-		
+
 		//editor.remove("saltar");
 		
 		editor.commit();
 		
 		if(!settings.getBoolean(getString(R.string.salir), false) && !settings.getBoolean(getString(R.string.saltar), false)){
-			if(!(settings.getBoolean(getString(R.string.home), false) && settings.getBoolean(getString(R.string.cascos), false) && !settings.getBoolean(getString(R.string.cascosAnterior), false)) 
+			if(!checkCascosEsxtraidos(settings)
 				&& !(settings.getBoolean(getString(R.string.home), false) && settings.getBoolean(getString(R.string.cascosAnterior), false) && !settings.getBoolean(getString(R.string.cascos), false))){
 				 
 		    	//registro la variable de comunicación con el Escuchador
@@ -158,8 +174,12 @@ public class IntroActivity extends Activity{
 		}
 		editor.commit();
 	}
-	
-	private void setVideoUri(int IDVideo) {
+
+    private boolean checkCascosEsxtraidos(SharedPreferences settings) {
+        return settings.getBoolean(getString(R.string.home), false) && settings.getBoolean(getString(R.string.cascos), false) && !settings.getBoolean(getString(R.string.cascosAnterior), false);
+    }
+
+    void setVideoUri(int IDVideo) {
 		Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+IDVideo);
 		v.setVideoURI(uri);
 	}
@@ -176,9 +196,7 @@ public class IntroActivity extends Activity{
 	
 	//Método una vez se vuelve a esta ventana
 	protected void onActivityResult(int requestCode,int resultCode,Intent data){
-		switch(requestCode){
-		case ACTION_VALUE:
-			if(resultCode==RESULT_CANCELED){
+		if(requestCode == ACTION_VALUE && resultCode==RESULT_CANCELED){
 				SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 				if(settings.getBoolean(getString(R.string.salir), false))
 					detener();
@@ -189,7 +207,6 @@ public class IntroActivity extends Activity{
 				}
 					
 			}
-		}
 	}
 
 	@Override
@@ -239,13 +256,7 @@ public class IntroActivity extends Activity{
 	    return cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnectedOrConnecting();
 	}
 
-	@Override
-	protected void onStop(){
-		super.onStop();
-		
-	}
-	
-	@Override
+    @Override
 	protected void onDestroy(){
 		super.onDestroy();
 		
@@ -260,17 +271,7 @@ public class IntroActivity extends Activity{
 		unregisterReceiver(abcd);
 	}
 	
-	private final BroadcastReceiver abcd = new BroadcastReceiver() {
-        
-		@Override
-        public void onReceive(Context context, Intent intent) {
-			
-			SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(IntroActivity.this);
-			if(!settings.getBoolean(getString(R.string.home), false))
-				finish();
-        }
-		
-	};
+
 	
 	private boolean isHomeButtonPressed(){
 		Context context = getApplicationContext();

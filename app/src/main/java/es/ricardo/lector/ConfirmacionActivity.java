@@ -3,7 +3,6 @@ package es.ricardo.lector;
 import java.util.ArrayList;
 import java.util.List;
 
-import es.ricardo.lector.ConfirmacionActivity;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
@@ -37,6 +36,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Clase encargada de gestionar la Activity propia de la pantalla de confirmación
+ */
 public class ConfirmacionActivity extends Activity implements OnGesturePerformedListener{
 
 	private TextView tv;
@@ -47,6 +49,22 @@ public class ConfirmacionActivity extends Activity implements OnGesturePerformed
 	
 	MediaPlayer mp;
 	private boolean soportaBarraTitulo=false;
+
+	private final BroadcastReceiver abcd = new BroadcastReceiver() {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(ConfirmacionActivity.this);
+			SharedPreferences.Editor editor = settings.edit();
+			editor.putBoolean(getString(R.string.salir), true);
+			editor.commit();
+
+			ConfirmacionActivity.this.setResult(RESULT_CANCELED);
+
+			finish();
+		}
+
+	};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -63,9 +81,9 @@ public class ConfirmacionActivity extends Activity implements OnGesturePerformed
 		
 		setContentView(R.layout.layout_confirmacion);
 		
-		if(soportaBarraTitulo)
-			getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.layout_titulo);
-		
+		if(soportaBarraTitulo) {
+            getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.layout_titulo);
+        }
 		//Agrego la capa para detectar gestos
 		 myInflater=LayoutInflater.from(this);
 		 gestosView=(GestureOverlayView) myInflater.inflate(R.layout.capa_gestos, null);
@@ -86,8 +104,9 @@ public class ConfirmacionActivity extends Activity implements OnGesturePerformed
 		 mostrarVeces();
 		 establecerFuente();
 		 
-		String accionLanzamiento=settings.getString(getString(R.string.lanzamiento), null);
-		if(accionLanzamiento==null)
+		 String accionLanzamiento=settings.getString(getString(R.string.lanzamiento), null);
+		 
+		 if(accionLanzamiento==null)
 			 mp = MediaPlayer.create(this, R.raw.vincular_confirmacion);
 		 else
 			 mp = MediaPlayer.create(this, R.raw.desvincular_confirmacion); 
@@ -112,7 +131,7 @@ public class ConfirmacionActivity extends Activity implements OnGesturePerformed
 	public void onGesturePerformed(GestureOverlayView overlay, Gesture gesture) {
 		ArrayList<Prediction> predictions = libreriaGestos.recognize(gesture);
 		
-		if (predictions.size() > 0 && predictions.get(0).score > 5.0) {
+		if (!predictions.isEmpty() && predictions.get(0).score > 5.0) {
 			if(mp.isPlaying())
 				mp.stop();
 			//mp.release();
@@ -122,7 +141,7 @@ public class ConfirmacionActivity extends Activity implements OnGesturePerformed
 		     if(getString(R.string.antihorario).equalsIgnoreCase(result)){
 		    	//Introduzco la variable centinela que le indique al servicio que debe lanzar la aplicación al retirar los auriculares
 		         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
-		    	 SharedPreferences.Editor editor = settings.edit();
+		         SharedPreferences.Editor editor = settings.edit();
 		         
 		         String accionLanzamiento=settings.getString(getString(R.string.lanzamiento), null);
 		         if(accionLanzamiento==null)
@@ -140,7 +159,12 @@ public class ConfirmacionActivity extends Activity implements OnGesturePerformed
 		     }
 		}
 	}
-	
+
+	/**
+	 * Muestra mensajes emergentes
+	 *
+	 * @param toast
+     */
  	 public void showToast(final String toast) {
    	    runOnUiThread(new Runnable() {
    	      @Override
@@ -167,9 +191,8 @@ public class ConfirmacionActivity extends Activity implements OnGesturePerformed
 		mp.setOnCompletionListener(new OnCompletionListener() {
 
 				public void onCompletion(MediaPlayer mp) {
-					
-					mp = MediaPlayer.create(ConfirmacionActivity.this, R.raw.salir);
-					mp.setOnCompletionListener(new OnCompletionListener() {
+					MediaPlayer player = MediaPlayer.create(ConfirmacionActivity.this, R.raw.salir);
+					player.setOnCompletionListener(new OnCompletionListener() {
 										
 						public void onCompletion(MediaPlayer mp) {
 							//Dado que la ResultadoActivity se destruye al entrar en esta Activity, tengo que indicarle cuando vuelvo lo que debe hacer
@@ -182,7 +205,7 @@ public class ConfirmacionActivity extends Activity implements OnGesturePerformed
 							finish();
 						}
 					});
-					mp.start();
+					player.start();
 				}
 				
 			});
@@ -253,22 +276,6 @@ public class ConfirmacionActivity extends Activity implements OnGesturePerformed
 		
 		unregisterReceiver(abcd);
 	}
-	
-	private final BroadcastReceiver abcd = new BroadcastReceiver() {
-        
-		@Override
-        public void onReceive(Context context, Intent intent) {
-			SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(ConfirmacionActivity.this);
-			SharedPreferences.Editor editor = settings.edit();
-		    editor.putBoolean(getString(R.string.salir), true);
-		    editor.commit();
-		     
-		    ConfirmacionActivity.this.setResult(RESULT_CANCELED);
-			
-			finish();                                   
-        }
-		
-	};
 	
 	public boolean isHomeButtonPressed(){
 		Context context = getApplicationContext();

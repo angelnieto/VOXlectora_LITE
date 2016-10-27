@@ -6,9 +6,12 @@ import android.app.ActivityManager;
 import android.app.ActivityManager.RunningTaskInfo;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -43,22 +46,53 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
+/**
+ * Activity encargada del manejo de la captura de las fotografías
+ */
 public class CamaraActivity extends Activity implements SurfaceHolder.Callback{
 	
 	static final int ACTION_VALUE=1;
-	static Uri directorio;
+	private Uri directorio;
 		
 	private Camera miCamara;
 	private Button takePicture;
 	private MediaPlayer mp;
 	private String gradosARotar = "0";
-	private float coordenadaY,coordenadaX;
+	private float coordenadaY;
+    private float coordenadaX;
+	
+	private final BroadcastReceiver abcd = new BroadcastReceiver() {
+        
+		@Override
+        public void onReceive(Context context, Intent intent) {
+			 detener(false);                            
+        }
+		
+	};
+
+	static Logger logger = Logger.getLogger("VOXlectora_LITE");
+    static CamaraActivity instance = null;
+
+    public static CamaraActivity getInstance() {
+        if(instance == null){
+            instance = new CamaraActivity();
+        }
+        return instance;
+    }
+
+    public Uri getDirectorio() {
+        return directorio;
+    }
+
+    public void setDirectorio(Uri directorio) {
+        this.directorio = directorio;
+    }
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		directorio=getUriArchivoImagen();
+		setDirectorio(getUriArchivoImagen());
 		
 		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 		
@@ -88,7 +122,7 @@ public class CamaraActivity extends Activity implements SurfaceHolder.Callback{
 					AutoFocalizador autoFocusCallBack = new AutoFocalizador();
 					miCamara.autoFocus(autoFocusCallBack);
 					
-					takePicture.setEnabled(false);
+					takePicture.setEnabled(false); 
 				}
 			});
 			
@@ -112,13 +146,17 @@ public class CamaraActivity extends Activity implements SurfaceHolder.Callback{
 			            	    miCamara.setDisplayOrientation(180);
 			            	gradosARotar(lRotation); 
 			            break;
+						default:
+							break;
 		            }
 				}
-				
-				public void onAccuracyChanged(Sensor sensor, int accuracy) {	}
+
+				public void onAccuracyChanged(Sensor sensor, int accuracy) {
+					//method not tested
+				}
 			};
 			
-			//El sensor es el que determina el volteado de la previsualización en pantalla 
+			//El sensor es el que determina el volteado de la previsualización en pantalla
 			SensorManager sm=(SensorManager)getSystemService(Context.SENSOR_SERVICE);
 			sm.registerListener(sensorEventListener, sm.getSensorList(Sensor.TYPE_ACCELEROMETER ).get(0),SensorManager.SENSOR_DELAY_NORMAL);
 		}else{
@@ -137,7 +175,7 @@ public class CamaraActivity extends Activity implements SurfaceHolder.Callback{
 		super.onResume();
 		
 		if(takePicture!=null){
-	    	//registro la variable de comunicaci�n con el Escuchador
+	    	//registro la variable de comunicación con el Escuchador
 			SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 			SharedPreferences.Editor editor = settings.edit();
 			editor.putInt(getString(R.string.activity),2);
@@ -162,6 +200,14 @@ public class CamaraActivity extends Activity implements SurfaceHolder.Callback{
         	gradosARotar="180";
 	}
 
+	/**
+	 * Método llamado cuando la pantalla cambia a modo cámara
+	 *
+	 * @param holder
+	 * @param format
+	 * @param width
+     * @param height
+     */
 	public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
 
 		try {
@@ -180,7 +226,7 @@ public class CamaraActivity extends Activity implements SurfaceHolder.Callback{
 			takePicture.setEnabled(false);
 			mp=MediaPlayer.create(CamaraActivity.this, R.raw.error_camara);
 			mp.start();
-			e.printStackTrace();
+			logger.log(Level.SEVERE,e.getMessage(),e);
 		}
 	}
 	
@@ -202,6 +248,11 @@ public class CamaraActivity extends Activity implements SurfaceHolder.Callback{
 	    return result;
 	}
 
+    /**
+     * Método que se llama al cargar la imagen de previsualización
+     *
+     * @param holder
+     */
 	public void surfaceCreated(SurfaceHolder holder) {
 			miCamara = Camera.open();
 			
@@ -210,13 +261,11 @@ public class CamaraActivity extends Activity implements SurfaceHolder.Callback{
             mp.start();
 	}
 
-	private class AutoFocalizador implements Camera.AutoFocusCallback {
-		
-		private boolean isAutoFocused=false;
+    private class AutoFocalizador implements Camera.AutoFocusCallback {
 		
 		@Override
 	    public void onAutoFocus(boolean success, Camera camera) {
-	   
+			
 			ShutterCallback myShutterCallback = new ShutterCallback() {
 				
 				public void onShutter() {
@@ -232,7 +281,7 @@ public class CamaraActivity extends Activity implements SurfaceHolder.Callback{
 			};
 			
 			PictureCallback myJpeg = new PictureCallback() {
-				
+		
 				public void onPictureTaken(byte[] data, Camera myCamera) {
 
 					if(data != null)
@@ -241,12 +290,11 @@ public class CamaraActivity extends Activity implements SurfaceHolder.Callback{
 				
 				void done(byte[] tempdata){
 					
-					Exception excepcion=null;
-					
 					String imageFilePath = getUriArchivoImagen().getPath();
 
+					FileOutputStream out = null;
 		           	try {
-					       FileOutputStream out = new FileOutputStream(imageFilePath);
+					       out = new FileOutputStream(imageFilePath);
 		           		
 					       Options options = new Options();
 					       options.inJustDecodeBounds = true;
@@ -271,36 +319,44 @@ public class CamaraActivity extends Activity implements SurfaceHolder.Callback{
 					       Bitmap resizedBitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.getWidth(),bmp.getHeight(), matrix, false);
 					        
 					       resizedBitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
-				           out.close();  
-					} catch (Exception e) {
-							mp=MediaPlayer.create(CamaraActivity.this, R.raw.error_captura);
-							mp.start();
-					        excepcion=e;
+
+                            //Borro el texto del procesamiento anterior
+                            SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(CamaraActivity.this);
+                            SharedPreferences.Editor editor = settings.edit();
+                            editor.remove(getString(R.string.texto));
+                            editor.commit();
+
+                         //Llamo a la siguiente pantalla
+                         Intent results = new Intent(CamaraActivity.this, ResultadoActivity.class);
+                         startActivityForResult(results, ACTION_VALUE);
+				    } catch (FileNotFoundException e) {
+				   			mp=MediaPlayer.create(CamaraActivity.this, R.raw.error_captura);
+				   			mp.start();
+                            logger.log(Level.SEVERE,e.getMessage(),e);
+				   	 }finally{
+						if(out != null){
+							try {
+								out.close();
+							} catch( IOException e ){logger.log(Level.SEVERE,e.getMessage(),e);}
+						}
 					}
-					
-		           	if(excepcion==null){
-			           	//Borro el texto del procesamiento anterior
-						SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(CamaraActivity.this);
-						SharedPreferences.Editor editor = settings.edit();
-						editor.remove(getString(R.string.texto));
-						editor.commit();
-						
-						//Llamo a la siguiente pantalla
-				        Intent results = new Intent(CamaraActivity.this, ResultadoActivity.class);
-				    	startActivityForResult(results, ACTION_VALUE);
-		           	}
+
 				}
 			
 			};
 			
-			isAutoFocused=success;
-	    	if(isAutoFocused)
+	    	if(success)
 	    		MediaPlayer.create(CamaraActivity.this, R.raw.alarma_foco).start();
-	    
+	    			    		
 	    	miCamara.takePicture(myShutterCallback, myPictureCallback, myJpeg);
-		}
+	    }
 	}
 
+    /**
+     * Método que se llama al quitar la previsualización de la cámara en pantalla
+     *
+     * @param holder
+     */
 	public void surfaceDestroyed(SurfaceHolder holder) {
 		miCamara.stopPreview();
 		miCamara.release();
@@ -313,29 +369,23 @@ public class CamaraActivity extends Activity implements SurfaceHolder.Callback{
 	}
 	
 	private File getImagen(){
-	    
+		//File mediaStorageDir = new File(Environment.getExternalStorageDirectory(),getString(R.string.raizMovil));
 		File mediaStorageDir = new File(this.getFilesDir(),getString(R.string.raizMovil));
-	    // Crear el directorio de almacenamiento si no existe
-	    if (! mediaStorageDir.exists())
-	        if (! mediaStorageDir.mkdirs())
+		// Crear el directorio de almacenamiento si no existe
+	    if (!mediaStorageDir.exists() && !mediaStorageDir.mkdirs())
 	            return null;
 	    
 	    //Crear un archivo con la imagen
-	    File mediaFile = new File(mediaStorageDir.getPath() + File.separator + getString(R.string.nombre_imagen));
-
-	    return mediaFile;
+	    return new File(mediaStorageDir.getPath() + File.separator + getString(R.string.nombre_imagen));
 	}
 
-	   //Método una vez se vuelve a esta ventana
+	   // Método una vez se vuelve a esta ventana
 		protected void onActivityResult(int requestCode,int resultCode,Intent data){
-			switch(requestCode){
-			case ACTION_VALUE:
-				if(resultCode==RESULT_CANCELED){
+			if(requestCode == ACTION_VALUE && resultCode==RESULT_CANCELED){
 					setResult(RESULT_CANCELED);
 					SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 					if(settings.getBoolean(getString(R.string.salir), false) || settings.getBoolean(getString(R.string.home), false) || settings.getBoolean(getString(R.string.saltar), false))
 						finish();
-				}
 			}
 		}
 		
@@ -358,15 +408,7 @@ public class CamaraActivity extends Activity implements SurfaceHolder.Callback{
 			
 			unregisterReceiver(abcd);
 		}
-		
-		private final BroadcastReceiver abcd = new BroadcastReceiver() {
-	        
-			@Override
-	        public void onReceive(Context context, Intent intent) {
-				 detener(false);                            
-	        }
-			
-		};
+
 		
 		public boolean isHomeButtonPressed(){
 			Context context = getApplicationContext();

@@ -1,6 +1,5 @@
 package es.ricardo.servicio;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import es.ricardo.lector.R;
@@ -14,6 +13,9 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
 
+/**
+ * Clase que escucha el evento de extracción de los cascos
+ */
 public class Escuchador extends BroadcastReceiver {
 	
 	private boolean centinela=false;
@@ -36,9 +38,8 @@ public class Escuchador extends BroadcastReceiver {
         if (intent.getAction().equals(Intent.ACTION_HEADSET_PLUG) && !VOXlectora) {
             int state = intent.getIntExtra(context.getString(R.string.estado), -1);
             
-            switch (state) {
-	            case 0:
-	            	if(centinela){
+            if(state == 0) {
+	           	if(centinela){
 		            	SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
 		            	SharedPreferences.Editor editor = settings.edit();
 		            	editor.putBoolean(context.getString(R.string.escuchador), true);
@@ -52,9 +53,8 @@ public class Escuchador extends BroadcastReceiver {
 		        		Toast.makeText(context, "Auricular extraído",Toast.LENGTH_SHORT).show();
 		        		centinela=false;
 	            	}
-	            break;
-	            case 1:
-	            	centinela=true;
+            }else{   
+	              	centinela=true;
 	            	SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
 	            	
 	            	switch(settings.getInt(context.getString(R.string.activity), 0)){
@@ -71,8 +71,10 @@ public class Escuchador extends BroadcastReceiver {
 		            	case 4:
 		            		context.sendBroadcast(new Intent("4"));
 		            	break;
+		            	default:
+		            	break;
 	            	}
-	            break;
+	           
 	       }
         }
 	}
