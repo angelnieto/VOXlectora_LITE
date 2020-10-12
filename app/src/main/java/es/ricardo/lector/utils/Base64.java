@@ -1,4 +1,4 @@
-package es.ricardo.lector;
+package es.ricardo.voxlectora.utils;
 
 import java.io.IOError;
 import java.util.logging.Level;
